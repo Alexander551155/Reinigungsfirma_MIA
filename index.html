@@ -3,116 +3,908 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gebäudereinigung Firma MIA – Ihr Partner für Reinigung und Sauberkeit</title>
-  <meta name="description" content="Zuverlässige Gebäudereinigung, Unterhaltsreinigung und Spezialreinigungen für Büros, Wohnungen und öffentliche Bereiche.">
+  <title>Gebäudereinigung Firma MIA – Ihr Partner für Sauberkeit & Hygiene</title>
+  <meta name="description" content="Gebäudereinigung, Büroreinigung und Unterhaltsreinigung von Firma MIA – zuverlässig, flexibel und gründlich.">
+  
+  <!-- Bootstrap & Fonts -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link rel="icon" href="LOGO_ORIG.png>
+
+  <!-- Favicon -->
+  <link rel="icon" href="LOGO_ORIG.png">
+
+  <style>
+    :root {
+      --accent: #0f7bff;
+      --accent-soft: rgba(15, 123, 255, 0.08);
+      --dark: #111827;
+      --muted: #6b7280;
+    }
+
+    * {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #111827;
+      background-color: #f9fafb;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+      background-color: rgba(255,255,255,0.96) !important;
+      backdrop-filter: blur(10px);
+    }
+    .navbar-brand span {
+      font-size: 1.15rem;
+      letter-spacing: .03em;
+    }
+    .nav-link {
+      font-weight: 500;
+      color: #4b5563 !important;
+    }
+    .nav-link:hover {
+      color: var(--accent) !important;
+    }
+    .btn-accent {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 999px;
+      padding-inline: 1.2rem;
+    }
+    .btn-accent:hover {
+      background: #0c62cc;
+      border-color: #0c62cc;
+      color: #fff;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url("assets/img/gebaeudereinigung-service.jpeg");
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.5);
+      transform: scale(1.03);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(15, 123, 255, 0.65), transparent 55%),
+                  linear-gradient(120deg, rgba(15, 123, 255, 0.55), rgba(15, 123, 255, 0.05));
+      mix-blend-mode: multiply;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background-color: rgba(15, 123, 255, .1);
+      border-radius: 999px;
+      padding: .35rem .9rem;
+      font-size: .8rem;
+      font-weight: 500;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .hero-badge i {
+      font-size: 1rem;
+    }
+    .hero h1 {
+      font-weight: 700;
+      letter-spacing: -.03em;
+    }
+    .hero-lead {
+      font-size: 1.1rem;
+      max-width: 40rem;
+    }
+    .hero-meta {
+      font-size: .9rem;
+      opacity: .9;
+    }
+    .hero-card {
+      background: rgba(17, 24, 39, 0.84);
+      border-radius: 1.25rem;
+      border: 1px solid rgba(255,255,255,.08);
+      padding: 1.5rem;
+      box-shadow: 0 20px 50px rgba(15,23,42,0.55);
+    }
+    .hero-card h5 {
+      margin-bottom: .75rem;
+    }
+    .hero-card .small {
+      color: #d1d5db;
+    }
+    .hero-check {
+      color: #a7f3d0;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding-block: 4.5rem;
+    }
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: .17em;
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .section-title {
+      font-weight: 700;
+      letter-spacing: -.02em;
+    }
+    .section-text {
+      color: var(--muted);
+      max-width: 42rem;
+      margin-inline: auto;
+    }
+
+    /* CARDS */
+    .lift {
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .lift:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(15,23,42,0.12);
+    }
+    .card-service {
+      border-radius: 1.25rem;
+      border: 1px solid #e5e7eb;
+      overflow: hidden;
+      background: #fff;
+    }
+    .card-service img {
+      height: 190px;
+      object-fit: cover;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .25rem .7rem;
+      border-radius: 999px;
+      font-size: .75rem;
+      background-color: #f3f4f6;
+      color: #4b5563;
+    }
+
+    /* FEATURE ICON CARDS */
+    .feature-icon {
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent-soft);
+      color: var(--accent);
+      margin-bottom: .75rem;
+    }
+
+    /* TIMELINE / PROCESS */
+    .step {
+      position: relative;
+      padding-left: 2.75rem;
+    }
+    .step-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: .9rem;
+    }
+    .step + .step {
+      margin-top: 1.5rem;
+    }
+
+    /* TESTIMONIALS */
+    .testimonial {
+      border-radius: 1.25rem;
+      padding: 1.5rem;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      height: 100%;
+    }
+    .testimonial .name {
+      font-weight: 600;
+    }
+    .testimonial .role {
+      font-size: .85rem;
+      color: var(--muted);
+    }
+
+    /* FAQ */
+    .accordion-button:focus {
+      box-shadow: none;
+      border-color: rgba(15,123,255,0.4);
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: #eff6ff;
+      color: #1f2937;
+    }
+
+    /* CONTACT */
+    .contact-card {
+      border-radius: 1.5rem;
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      padding: 2rem;
+    }
+    .contact-meta i {
+      font-size: 1.1rem;
+      width: 1.5rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #020617;
+      color: #9ca3af;
+      padding-block: 2.5rem;
+      font-size: .9rem;
+    }
+    footer a {
+      color: #e5e7eb;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 991.98px) {
+      .hero {
+        min-height: auto;
+        padding-block: 3.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
+
 <!-- NAV -->
-<nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm bg-white">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-      <img src="LOGO_ORIG.png" alt="Gebäudereinigung Firma MIA" height="28">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#start">
+      <img src="LOGO_ORIG.png" alt="Gebäudereinigung Firma MIA" height="30">
       <span class="fw-semibold">Firma MIA</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ms-auto align-items-lg-center">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
         <li class="nav-item"><a class="nav-link" href="#leistungen">Leistungen</a></li>
         <li class="nav-item"><a class="nav-link" href="#warum">Warum wir</a></li>
-        <li class="nav-item"><a class="btn btn-accent ms-lg-3" href="#kontakt">Anfrage stellen</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ablauf">Ablauf</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="btn btn-accent ms-lg-2" href="#kontakt"><i class="bi bi-calendar-check me-1"></i> Angebot anfragen</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
-<header class="hero d-flex align-items-center text-white">
-  <div class="container py-5">
-    <div class="row align-items-center">
+<header id="start" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-inner py-5">
+    <div class="row g-4 align-items-center">
       <div class="col-lg-7">
-        <h1 class="display-5 fw-bold">Ihr Spezialist für Gebäudereinigungen</h1>
-        <p class="lead mt-3">Wir sorgen für Sauberkeit in Büros, Wohnungen und Gewerbeflächen – individuell und zuverlässig.</p>
-        <div class="d-flex gap-3 mt-4">
-          <a href="#kontakt" class="btn btn-accent btn-lg"><i class="bi bi-calendar-check me-2"></i> Reinigung anfragen</a>
-          <a href="#leistungen" class="btn btn-outline-light btn-lg"><i class="bi bi-briefcase me-2"></i> Unsere Leistungen</a>
+        <div class="hero-badge mb-3">
+          <i class="bi bi-stars"></i>
+          <span>Gebäudereinigung & Büroreinigung</span>
+        </div>
+        <h1 class="display-5 mb-3">Sauberkeit, auf die Sie sich verlassen können.</h1>
+        <p class="hero-lead mb-3">
+          Firma MIA übernimmt die professionelle Reinigung von Büros, Treppenhäusern, Wohnungen und Gewerbeflächen – gründlich, termintreu und diskret.
+        </p>
+        <p class="hero-meta mb-4">
+          <i class="bi bi-geo-alt me-1"></i> Ihr regionaler Partner &nbsp;•&nbsp; Flexible Reinigungstermine &nbsp;•&nbsp; Festpreise nach Besichtigung
+        </p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#kontakt" class="btn btn-accent btn-lg">
+            <i class="bi bi-calendar-week me-2"></i>
+            Unverbindliche Anfrage
+          </a>
+          <a href="tel:+490000000000" class="btn btn-outline-light btn-lg">
+            <i class="bi bi-telephone-outbound me-2"></i>
+            Direkt anrufen
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="hero-card mt-4 mt-lg-0">
+          <h5 class="mb-1">Jetzt Reinigung anfragen</h5>
+          <p class="small mb-3">In wenigen Schritten zu Ihrem individuellen Angebot.</p>
+          <ul class="list-unstyled mb-3">
+            <li class="d-flex gap-2 mb-2">
+              <span class="hero-check"><i class="bi bi-check-circle-fill"></i></span>
+              <span>Kurzbeschreibung Ihrer Räumlichkeiten (Büro, Treppenhaus, Wohnung …)</span>
+            </li>
+            <li class="d-flex gap-2 mb-2">
+              <span class="hero-check"><i class="bi bi-check-circle-fill"></i></span>
+              <span>Wunschtermine und Reinigungsintervalle festlegen</span>
+            </li>
+            <li class="d-flex gap-2 mb-2">
+              <span class="hero-check"><i class="bi bi-check-circle-fill"></i></span>
+              <span>Transparenter Festpreis – keine versteckten Kosten</span>
+            </li>
+          </ul>
+          <a href="#kontakt" class="btn btn-accent w-100">
+            <i class="bi bi-envelope-open me-2"></i> Anfrageformular öffnen
+          </a>
         </div>
       </div>
     </div>
   </div>
-  <div class="hero-bg" style="background-image:url('assets/img/gebaeudereinigung-service.jpeg');"></div>
-  <div class="hero-overlay"></div>
 </header>
 
 <!-- LEISTUNGEN -->
-<section id="leistungen" class="py-6">
+<section id="leistungen" class="section">
   <div class="container">
     <div class="text-center mb-5">
-      <h2 class="fw-bold">Unsere Reinigungsleistungen</h2>
-      <p class="text-muted">Professionelle Gebäudereinigung für Büros, Wohnungen und öffentliche Bereiche – für Sauberkeit und Hygiene.</p>
+      <div class="section-label mb-2">Leistungen</div>
+      <h2 class="section-title mb-2">Unsere Reinigungsleistungen</h2>
+      <p class="section-text">
+        Wir bieten Ihnen eine breite Palette an Reinigungsdiensten für gewerbliche und private Objekte. 
+        Die Leistungen werden individuell auf Ihr Objekt und Ihren Bedarf abgestimmt.
+      </p>
     </div>
+
+    <div class="row g-4">
+      <!-- Büroreinigung -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card card-service lift h-100">
+          <img src="Buerroreinigung-768x432.jpg" class="card-img-top" alt="Büroreinigung">
+          <div class="card-body">
+            <span class="chip mb-2"><i class="bi bi-building"></i> Büro & Gewerbe</span>
+            <h5 class="card-title">Büro- & Gebäudereinigung</h5>
+            <p class="card-text text-muted">
+              Regelmäßige Reinigung von Büroräumen, Fluren und Sanitärbereichen für ein gepflegtes und hygienisches Arbeitsumfeld.
+            </p>
+            <ul class="small text-muted mb-0">
+              <li>Unterhaltsreinigung</li>
+              <li>Oberflächen- & Bodenreinigung</li>
+              <li>Entleerung von Papierkörben</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wohnungsreinigung -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card card-service lift h-100">
+          <img src="praxisreinigung_v2-1-768x432.jpg" class="card-img-top" alt="Wohnungsreinigung">
+          <div class="card-body">
+            <span class="chip mb-2"><i class="bi bi-house-heart"></i> Privat</span>
+            <h5 class="card-title">Wohnungs- & Hausreinigung</h5>
+            <p class="card-text text-muted">
+              Gründliche Reinigung Ihrer Wohnräume – perfekt für Haushalte, möblierte Wohnungen und Übergaben.
+            </p>
+            <ul class="small text-muted mb-0">
+              <li>Küche, Bad & Wohnbereich</li>
+              <li>Staubwischen & Saugen</li>
+              <li>Optionale Grundreinigung</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Treppenhaus -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card card-service lift h-100">
+          <img src="assets/img/treppenhausreinigung.jpeg" class="card-img-top" alt="Treppenhausreinigung">
+          <div class="card-body">
+            <span class="chip mb-2"><i class="bi bi-stairs"></i> Objektpflege</span>
+            <h5 class="card-title">Treppen- & Treppenhausreinigung</h5>
+            <p class="card-text text-muted">
+              Saubere Eingangsbereiche und Treppenhäuser für einen einladenden ersten Eindruck bei Mietern und Besuchern.
+            </p>
+            <ul class="small text-muted mb-0">
+              <li>Wischen & Kehren</li>
+              <li>Geländer & Fensterbänke</li>
+              <li>Regelmäßige Objektkontrolle</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Glasreinigung -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card card-service lift h-100">
+          <img src="assets/img/glasreinigung.jpeg" class="card-img-top" alt="Fenster- & Glasreinigung">
+          <div class="card-body">
+            <span class="chip mb-2"><i class="bi bi-window"></i> Glas</span>
+            <h5 class="card-title">Fenster- & Glasreinigung</h5>
+            <p class="card-text text-muted">
+              Streifenfreie Fenster, Glasfronten und Schaufenster – für ein deutlich professionelleres Erscheinungsbild.
+            </p>
+            <ul class="small text-muted mb-0">
+              <li>Innen- & Außenreinigung</li>
+              <li>Glasfassaden & Schaufenster</li>
+              <li>Rahmen- & Falzreinigung</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bau- / Grundreinigung -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card card-service lift h-100">
+          <img src="assets/img/baureinigung.jpeg" class="card-img-top" alt="Bau- und Grundreinigung">
+          <div class="card-body">
+            <span class="chip mb-2"><i class="bi bi-tools"></i> Bau & Sanierung</span>
+            <h5 class="card-title">Bau- & Grundreinigung</h5>
+            <p class="card-text text-muted">
+              Entfernung von Bauschmutz, Farbe und Staub nach Umbau oder Renovierung. Ideal zur bezugsfertigen Übergabe.
+            </p>
+            <ul class="small text-muted mb-0">
+              <li>Grobreinigung & Feinreinigung</li>
+              <li>Boden- & Fensterpflege</li>
+              <li>Individuelle Terminabstimmung</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spezialreinigung -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card card-service lift h-100">
+          <img src="assets/img/spezialreinigung.jpeg" class="card-img-top" alt="Spezialreinigung">
+          <div class="card-body">
+            <span class="chip mb-2"><i class="bi bi-stars"></i> Spezial</span>
+            <h5 class="card-title">Sonder- & Spezialreinigungen</h5>
+            <p class="card-text text-muted">
+              Für besondere Anforderungen – z.&nbsp;B. Teppichreinigung, Desinfektion oder die Reinigung stark beanspruchter Flächen.
+            </p>
+            <ul class="small text-muted mb-0">
+              <li>Teppich- & Polsterreinigung</li>
+              <li>Desinfektionsreinigung</li>
+              <li>Individuelle Lösungen nach Bedarf</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WARUM WIR -->
+<section id="warum" class="section">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5">
+        <div class="section-label mb-2">Warum Firma MIA?</div>
+        <h2 class="section-title mb-3">Zuverlässig, gründlich & fair.</h2>
+        <p class="text-muted mb-3">
+          Mit Firma MIA gewinnen Sie einen Partner, der Ihre Räumlichkeiten so behandelt, als wären es die eigenen. 
+          Wir setzen auf klare Absprachen, feste Ansprechpartner und transparent kalkulierte Preise.
+        </p>
+        <ul class="text-muted small mb-0">
+          <li>Geschultes Reinigungspersonal</li>
+          <li>Moderne Reinigungsmittel & -geräte</li>
+          <li>Dokumentierte Abläufe und Qualitätskontrollen</li>
+          <li>Reinigung außerhalb Ihrer Kernarbeitszeiten möglich</li>
+        </ul>
+      </div>
+      <div class="col-lg-7">
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <div class="p-3 p-md-4 bg-white border rounded-4 lift h-100">
+              <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+              <h5>Zuverlässigkeit</h5>
+              <p class="text-muted small mb-0">
+                Feste Teams, planbare Einsätze und pünktliche Durchführung – wir halten unsere Zusagen.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 p-md-4 bg-white border rounded-4 lift h-100">
+              <div class="feature-icon"><i class="bi bi-stars"></i></div>
+              <h5>Qualität</h5>
+              <p class="text-muted small mb-0">
+                Sorgfältige Reinigungsarbeiten auf Basis klarer Checklisten und Standards.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 p-md-4 bg-white border rounded-4 lift h-100">
+              <div class="feature-icon"><i class="bi bi-arrow-repeat"></i></div>
+              <h5>Flexibilität</h5>
+              <p class="text-muted small mb-0">
+                Einmalig, regelmäßig oder kurzfristig – wir richten uns nach Ihren Anforderungen.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 p-md-4 bg-white border rounded-4 lift h-100">
+              <div class="feature-icon"><i class="bi bi-emoji-smile"></i></div>
+              <h5>Kundenzufriedenheit</h5>
+              <p class="text-muted small mb-0">
+                Direkter Kontakt, kurze Wege – und ein Ergebnis, mit dem Sie langfristig zufrieden sind.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABLAUF -->
+<section id="ablauf" class="section bg-white">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-label mb-2">Ablauf</div>
+      <h2 class="section-title mb-2">So einfach funktioniert die Zusammenarbeit</h2>
+      <p class="section-text">
+        Von der ersten Anfrage bis zur laufenden Reinigung – wir führen Sie transparent durch alle Schritte.
+      </p>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-lg-6">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h5>Kontakt & erste Einschätzung</h5>
+          <p class="text-muted small mb-0">
+            Sie senden uns eine Anfrage mit Angaben zu Objektart, Größe und Leistungsumfang – gerne telefonisch oder über das Formular.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h5>Besichtigung & Angebot</h5>
+          <p class="text-muted small mb-0">
+            Wir besichtigen das Objekt, klären alle Details und erstellen ein transparentes, unverbindliches Angebot zum Festpreis.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h5>Start der Reinigung</h5>
+          <p class="text-muted small mb-0">
+            Nach Ihrer Zusage starten wir zum vereinbarten Termin. Anpassungen der Leistung sind jederzeit in Abstimmung möglich.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-3">
+          <div class="col-12">
+            <div class="contact-card lift">
+              <h5 class="mb-3"><i class="bi bi-telephone-outbound me-2"></i>Direkt Kontakt aufnehmen</h5>
+              <div class="contact-meta mb-2 d-flex align-items-start gap-2">
+                <i class="bi bi-telephone"></i>
+                <div>
+                  <div class="small text-muted">Telefon</div>
+                  <a href="tel:+490000000000">+49 (0) 0000 000000</a>
+                </div>
+              </div>
+              <div class="contact-meta mb-2 d-flex align-items-start gap-2">
+                <i class="bi bi-envelope"></i>
+                <div>
+                  <div class="small text-muted">E-Mail</div>
+                  <a href="mailto:info@firma-mia.de">info@firma-mia.de</a>
+                </div>
+              </div>
+              <div class="contact-meta d-flex align-items-start gap-2">
+                <i class="bi bi-geo-alt"></i>
+                <div>
+                  <div class="small text-muted">Einsatzgebiet</div>
+                  <span>Bitte hier Region / Stadt ergänzen</span>
+                </div>
+              </div>
+              <hr>
+              <p class="small text-muted mb-2">
+                Teilen Sie uns mit, welche Flächen gereinigt werden sollen und in welchem Intervall Sie eine Reinigung wünschen.
+              </p>
+              <a href="#kontakt" class="btn btn-accent w-100">
+                <i class="bi bi-calendar-plus me-2"></i> Anfrage starten
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+  <div class="container">
+    <div class="text-center mb-4">
+      <div class="section-label mb-2">Kundenstimmen</div>
+      <h2 class="section-title mb-2">Was unsere Kunden sagen</h2>
+      <p class="section-text">
+        Viele unserer Kunden vertrauen uns seit Jahren – ob Hausverwaltung, Unternehmen oder private Haushalte.
+      </p>
+    </div>
+
     <div class="row g-4">
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm lift">
-          <img class="card-img-top" src="Buerroreinigung-768x432.jpg" alt="Büroreinigung">
-          <div class="card-body">
-            <h5 class="card-title">Büroreinigung</h5>
-            <p class="card-text">Regelmäßige Reinigung für Ihre Arbeitsräume, Teppiche und Fenster – für eine angenehme Arbeitsatmosphäre.</p>
-          </div>
+        <div class="testimonial lift">
+          <p class="mb-3">
+            „Unsere Büroräume werden seit Monaten von Firma MIA gereinigt – zuverlässig, gründlich und immer termingerecht. 
+            Die Zusammenarbeit ist unkompliziert.“
+          </p>
+          <div class="name">B. Schneider</div>
+          <div class="role">Büroleitung, kleines Unternehmen</div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm lift">
-          <img class="card-img-top" src="praxisreinigung_v2-1-768x432.jpg" alt="Wohnungsreinigung">
-          <div class="card-body">
-            <h5 class="card-title">Wohnungsreinigung</h5>
-            <p class="card-text">Gründliche Reinigung Ihrer privaten Wohnräume, von Küche bis Bad, für Wohlbefinden zuhause.</p>
-          </div>
+        <div class="testimonial lift">
+          <p class="mb-3">
+            „Besonders die regelmäßige Treppenhausreinigung hat unser Objekt deutlich aufgewertet. 
+            Mieter und Besucher nehmen die Sauberkeit positiv wahr.“
+          </p>
+          <div class="name">Hausverwaltung M.</div>
+          <div class="role">Mehrfamilienhaus</div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm lift">
-          <img class="card-img-top" src="assets/img/spezialreinigung.jpeg" alt="Spezialreinigung">
-          <div class="card-body">
-            <h5 class="card-title">Spezialreinigungen</h5>
-            <p class="card-text">Reinigung von Industrieanlagen, Baustellen und anderen besonderen Anforderungen.</p>
-          </div>
+        <div class="testimonial lift">
+          <p class="mb-3">
+            „Nach der Renovierung hat Firma MIA die Bauendreinigung übernommen – alles lief schnell, ordentlich und wie abgesprochen.“
+          </p>
+          <div class="name">Familie K.</div>
+          <div class="role">Privathaushalt</div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section bg-white">
+  <div class="container">
+    <div class="text-center mb-4">
+      <div class="section-label mb-2">FAQ</div>
+      <h2 class="section-title mb-2">Häufige Fragen zur Gebäudereinigung</h2>
+      <p class="section-text">
+        Hier finden Sie Antworten auf häufig gestellte Fragen. Für alles Weitere stehen wir Ihnen persönlich zur Verfügung.
+      </p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+                Reinigen Sie sowohl gewerbliche als auch private Objekte?
+              </button>
+            </h2>
+            <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Ja. Wir betreuen sowohl Büros und Gewerbeflächen als auch Treppenhäuser und private Wohnungen bzw. Häuser. 
+                Den Leistungsumfang passen wir immer individuell an.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+                Bringen Sie Reinigungsmittel und Equipment mit?
+              </button>
+            </h2>
+            <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                In der Regel bringen wir alle benötigten Reinigungsmittel und Geräte mit. 
+                Wenn Sie spezielle Produkte wünschen, können wir diese in Abstimmung ebenfalls verwenden.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">
+                Wie berechnen Sie den Preis für die Reinigung?
+              </button>
+            </h2>
+            <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Die Preise hängen von Objektgröße, Verschmutzungsgrad, Leistungsumfang und Intervall ab. 
+                Nach einer kurzen Besichtigung erhalten Sie ein transparentes Angebot zum Festpreis.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4">
+                Können die Reinigungen außerhalb unserer Öffnungszeiten erfolgen?
+              </button>
+            </h2>
+            <div id="a4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Ja. Viele unserer Kunden lassen die Reinigung frühmorgens oder abends durchführen. 
+                Wir finden gemeinsam mit Ihnen passende Zeitfenster.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5">
+                Wie schnell können Sie einen Termin anbieten?
+              </button>
+            </h2>
+            <div id="a5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                In vielen Fällen können wir kurzfristig Reinigungen übernehmen. 
+                Teilen Sie uns Ihre Wunschtermine mit – wir melden uns zügig mit einem Vorschlag zurück.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <!-- KONTAKT -->
-<section id="kontakt" class="py-6">
+<section id="kontakt" class="section">
   <div class="container">
-    <div class="text-center">
-      <h3 class="fw-bold mb-3">Kontaktieren Sie uns</h3>
-      <p class="lead">Lassen Sie uns wissen, wie wir Ihnen helfen können. Unser Team freut sich darauf, Ihre Anfrage zu beantworten.</p>
-      <a href="#" class="btn btn-accent mt-3">Unverbindlich anfragen</a>
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-5">
+        <div class="section-label mb-2">Kontakt</div>
+        <h2 class="section-title mb-2">Jetzt unverbindliches Angebot anfragen</h2>
+        <p class="text-muted mb-3">
+          Beschreiben Sie kurz Ihr Objekt und den gewünschten Leistungsumfang. 
+          Wir melden uns mit Rückfragen oder direkt mit einem Angebot.
+        </p>
+
+        <div class="contact-meta mb-2 d-flex align-items-start gap-2">
+          <i class="bi bi-telephone"></i>
+          <div>
+            <div class="small text-muted">Telefon</div>
+            <a href="tel:+490000000000">+49 (0) 0000 000000</a>
+          </div>
+        </div>
+        <div class="contact-meta mb-2 d-flex align-items-start gap-2">
+          <i class="bi bi-envelope"></i>
+          <div>
+            <div class="small text-muted">E-Mail</div>
+            <a href="mailto:info@firma-mia.de">info@firma-mia.de</a>
+          </div>
+        </div>
+        <div class="contact-meta mb-3 d-flex align-items-start gap-2">
+          <i class="bi bi-geo-alt"></i>
+          <div>
+            <div class="small text-muted">Adresse</div>
+            <span>Straße 1<br>PLZ Ort</span>
+          </div>
+        </div>
+
+        <div class="small text-muted">
+          Hinweis: Durch das Absenden Ihrer Anfrage erklären Sie sich damit einverstanden, 
+          dass wir Ihre Angaben zur Beantwortung speichern und verarbeiten.
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="contact-card lift">
+          <!-- Platzhalter-Formular (Action/Backend später ergänzen) -->
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Name*</label>
+                <input type="text" class="form-control" placeholder="Ihr Name" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">E-Mail*</label>
+                <input type="email" class="form-control" placeholder="Ihre E-Mail-Adresse" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Telefon</label>
+                <input type="tel" class="form-control" placeholder="Für Rückfragen (optional)">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Objektart</label>
+                <select class="form-select">
+                  <option selected>Bitte auswählen</option>
+                  <option>Büro / Gewerbe</option>
+                  <option>Treppenhaus / Objektverwaltung</option>
+                  <option>Wohnung / Haus</option>
+                  <option>Sonstiges</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Nachricht / Beschreibung*</label>
+                <textarea class="form-control" rows="4" placeholder="Kurzbeschreibung der Räumlichkeiten und gewünschten Leistung" required></textarea>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Wunschtermine</label>
+                <input type="text" class="form-control" placeholder="z. B. ab nächstem Monat, einmal pro Woche">
+              </div>
+              <div class="col-12 d-flex align-items-center gap-2">
+                <input type="checkbox" class="form-check-input" id="datenschutz">
+                <label for="datenschutz" class="form-check-label small">
+                  Ich habe die <a href="#datenschutz">Datenschutzhinweise</a> gelesen und akzeptiere sie.*
+                </label>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-accent w-100">
+                  <i class="bi bi-send me-2"></i> Anfrage absenden
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<footer class="border-top py-4">
+<!-- FOOTER -->
+<footer>
   <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
-    <div class="d-flex align-items-center gap-2">
-      <span class="small text-muted">© <span id="y"></span> Gebäudereinigung Firma MIA</span>
+    <div>
+      <span class="small">&copy; <span id="year"></span> Gebäudereinigung Firma MIA. Alle Rechte vorbehalten.</span>
     </div>
-    <div class="small">
-      <a class="me-3" href="#impressum">Impressum</a>
-      <a class="me-3" href="#datenschutz">Datenschutz</a>
-      <a href="#">Kontakt</a>
+    <div class="d-flex gap-3">
+      <a href="#impressum" class="small">Impressum</a>
+      <a href="#datenschutz" class="small">Datenschutz</a>
+      <a href="#kontakt" class="small">Kontakt</a>
     </div>
   </div>
 </footer>
+
+<!-- Optional: Dummy-Anker für Impressum / Datenschutz, bis eigene Seiten existieren -->
+<section id="impressum" class="section bg-white">
+  <div class="container">
+    <h3>Impressum</h3>
+    <p class="text-muted small">
+      Hier können Sie Ihr Impressum einfügen (Firmenname, Anschrift, Vertretungsberechtigte, Register, USt-ID etc.).
+    </p>
+  </div>
+</section>
+
+<section id="datenschutz" class="section">
+  <div class="container">
+    <h3>Datenschutz</h3>
+    <p class="text-muted small">
+      Hier können Sie Ihre Datenschutzerklärung einfügen oder auf eine separate Seite verlinken.
+    </p>
+  </div>
+</section>
+
+<!-- JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/script.js"></script>
+<script>
+  // Jahr im Footer setzen
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
