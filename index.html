@@ -3,584 +3,635 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gebaeudereinigung, Reinigungsfirma MIA – Ihr Partner für Sauberkeit & Hygiene</title>
-  <meta name="description" content="Gebäudereinigung, Büroreinigung und Unterhaltsreinigung von Reinigungsfirma MIA – zuverlässig, flexibel und gründlich.">
-  <!-- WhatsApp / Telegram Vorschau (Open Graph) -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Reinigungsfirma MIA – Ihr Partner für Sauberkeit & Hygiene">
-<meta property="og:description" content="Gebäudereinigung, Büroreinigung und Unterhaltsreinigung – zuverlässig, flexibel und gründlich.">
-<meta property="og:url" content="https://mia-reinigung.de/">
-<meta property="og:image" content="https://mia-reinigung.de/LOGO_ORIG_123.png?v=2">
-<meta property="og:image:secure_url" content="https://mia-reinigung.de/LOGO_ORIG_123.png?v=2">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:alt" content="Reinigungsfirma MIA Logo">
-<!-- Google Logo (Structured Data) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Reinigungsfirma MIA",
-  "url": "https://mia-reinigung.de/",
-  "logo": "https://mia-reinigung.de/LOGO_ORIG_123.png?v=2",
-  "image": "https://mia-reinigung.de/LOGO_ORIG_123.png?v=2",
-  "telephone": "+49 1521 2975639",
-  "email": "miareinigung.info@gmail.com",
-  "areaServed": ["Mainz", "Wiesbaden"]
-}
-</script>
-
-
-  
-  <!-- Bootstrap & Fonts -->
+  <title>Gebäudereinigung Mainz | MIA Reinigung - Büro & Praxis</title>
+  <meta name="description" content="Gebäudereinigung Mainz von MIA Reinigung: Büroreinigung, Unterhaltsreinigung, Treppenhausreinigung, Praxisreinigung und Fensterreinigung. Jetzt Angebot anfragen.">
+  <link rel="canonical" href="https://mia-reinigung.de/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gebäudereinigung Mainz | MIA Reinigung">
+  <meta property="og:description" content="Professionelle Gebäudereinigung Mainz: Büroreinigung, Praxisreinigung, Treppenhausreinigung, Fensterreinigung und Unterhaltsreinigung.">
+  <meta property="og:url" content="https://mia-reinigung.de/">
+  <meta property="og:image" content="https://mia-reinigung.de/LOGO_ORIG_123.png?v=2">
+  <meta property="og:image:alt" content="MIA Reinigung Logo">
+  <link rel="icon" type="image/png" sizes="48x48" href="LOGO_ORIG_123_48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="LOGO_ORIG_123_192.png">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/img/optimized/gebaeudereinigung-mainz-hero.webp" fetchpriority="high">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-
-<!-- Favicon -->
-<link rel="icon" type="image/png" sizes="48x48" href="/LOGO_ORIG_123_48.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/LOGO_ORIG_123_192.png">
-  <style>
-    :root {
-      --accent: #0f7bff;
-      --accent-soft: rgba(15, 123, 255, 0.08);
-      --dark: #111827;
-      --muted: #6b7280;
-    }
-
-    * {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #111827;
-      background-color: #f9fafb;
-    }
-
-    /* NAVBAR */
-    .navbar {
-      padding-top: .75rem;
-      padding-bottom: .75rem;
-      background-color: rgba(255,255,255,0.96) !important;
-      backdrop-filter: blur(10px);
-    }
-    .navbar-brand span {
-      font-size: 1.15rem;
-      letter-spacing: .03em;
-    }
-    .nav-link {
-      font-weight: 500;
-      color: #4b5563 !important;
-    }
-    .nav-link:hover {
-      color: var(--accent) !important;
-    }
-    .btn-accent {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #fff;
-      font-weight: 600;
-      border-radius: 999px;
-      padding-inline: 1.2rem;
-    }
-    .btn-accent:hover {
-      background: #0c62cc;
-      border-color: #0c62cc;
-      color: #fff;
-    }
-
-    /* HERO */
-    .hero {
-      position: relative;
-      min-height: 80vh;
-      display: flex;
-      align-items: center;
-      color: #fff;
-      overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background-image: url("assets/img/vitaly-gariev-xWTTSE3ejzI-unsplash.jpg");
-      background-size: cover;
-      background-position: center;
-      filter: brightness(0.8);
-      transform: scale(1.03);
-    }
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top left, rgba(15, 123, 255, 0.25), transparent 55%),
-              linear-gradient(120deg, rgba(15, 123, 255, 0.18), rgba(15, 123, 255, 0.00));
-  mix-blend-mode: multiply;
-}
-    .hero-inner {
-      position: relative;
-      z-index: 2;
-    }
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      background-color: rgba(15, 123, 255, .1);
-      border-radius: 999px;
-      padding: .35rem .9rem;
-      font-size: .8rem;
-      font-weight: 500;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-    }
-    .hero-badge i {
-      font-size: 1rem;
-    }
-    .hero h1 {
-      font-weight: 700;
-      letter-spacing: -.03em;
-    }
-    .hero-lead {
-      font-size: 1.1rem;
-      max-width: 40rem;
-    }
-    .hero-meta {
-      font-size: .9rem;
-      opacity: .9;
-    }
-    .hero-card {
-      background: rgba(17, 24, 39, 0.84);
-      border-radius: 1.25rem;
-      border: 1px solid rgba(255,255,255,.08);
-      padding: 1.5rem;
-      box-shadow: 0 20px 50px rgba(15,23,42,0.55);
-    }
-    .hero-card h5 {
-      margin-bottom: .75rem;
-    }
-    .hero-card .small {
-      color: #d1d5db;
-    }
-    .hero-check {
-      color: #a7f3d0;
-    }
-
-    /* SECTIONS */
-    .section {
-      padding-block: 4.5rem;
-    }
-    .section-label {
-      text-transform: uppercase;
-      letter-spacing: .17em;
-      font-size: .75rem;
-      font-weight: 600;
-      color: var(--accent);
-    }
-    .section-title {
-      font-weight: 700;
-      letter-spacing: -.02em;
-    }
-    .section-text {
-      color: var(--muted);
-      max-width: 42rem;
-      margin-inline: auto;
-    }
-
-    /* CARDS */
-    .lift {
-      transition: transform .18s ease, box-shadow .18s ease;
-    }
-    .lift:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(15,23,42,0.12);
-    }
-    .card-service {
-      border-radius: 1.25rem;
-      border: 1px solid #e5e7eb;
-      overflow: hidden;
-      background: #fff;
-    }
-    .card-service img {
-      height: 190px;
-      object-fit: cover;
-    }
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: .4rem;
-      padding: .25rem .7rem;
-      border-radius: 999px;
-      font-size: .75rem;
-      background-color: #f3f4f6;
-      color: #4b5563;
-    }
-
-    /* FEATURE ICON CARDS */
-    .feature-icon {
-      width: 2.75rem;
-      height: 2.75rem;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--accent-soft);
-      color: var(--accent);
-      margin-bottom: .75rem;
-    }
-
-    /* TIMELINE / PROCESS */
-    .step {
-      position: relative;
-      padding-left: 2.75rem;
-    }
-    .step-number {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 2rem;
-      height: 2rem;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      font-size: .9rem;
-    }
-    .step + .step {
-      margin-top: 1.5rem;
-    }
-
-    /* TESTIMONIALS */
-    .testimonial {
-      border-radius: 1.25rem;
-      padding: 1.5rem;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      height: 100%;
-    }
-    .testimonial .name {
-      font-weight: 600;
-    }
-    .testimonial .role {
-      font-size: .85rem;
-      color: var(--muted);
-    }
-
-    /* FAQ */
-    .accordion-button:focus {
-      box-shadow: none;
-      border-color: rgba(15,123,255,0.4);
-    }
-    .accordion-button:not(.collapsed) {
-      background-color: #eff6ff;
-      color: #1f2937;
-    }
-
-    /* CONTACT */
-    .contact-card {
-      border-radius: 1.5rem;
-      border: 1px solid #e5e7eb;
-      background: #ffffff;
-      padding: 2rem;
-    }
-    .contact-meta i {
-      font-size: 1.1rem;
-      width: 1.5rem;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #020617;
-      color: #9ca3af;
-      padding-block: 2.5rem;
-      font-size: .9rem;
-    }
-    footer a {
-      color: #e5e7eb;
-      text-decoration: none;
-    }
-    footer a:hover {
-      color: #fff;
-      text-decoration: underline;
-    }
-
-    @media (max-width: 991.98px) {
-      .hero {
-        min-height: auto;
-        padding-block: 3.5rem;
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://mia-reinigung.de/#website",
+      "url": "https://mia-reinigung.de/",
+      "name": "MIA Reinigung",
+      "inLanguage": "de-DE",
+      "publisher": {
+        "@id": "https://mia-reinigung.de/#localbusiness"
       }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://mia-reinigung.de/#webpage",
+      "url": "https://mia-reinigung.de/",
+      "name": "Gebäudereinigung Mainz | MIA Reinigung",
+      "description": "Professionelle Gebäudereinigung in Mainz und Wiesbaden: Büroreinigung, Unterhaltsreinigung, Treppenhausreinigung, Praxisreinigung und Fensterreinigung.",
+      "isPartOf": {
+        "@id": "https://mia-reinigung.de/#website"
+      },
+      "about": {
+        "@id": "https://mia-reinigung.de/#cleaningservice"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+      "url": "https://mia-reinigung.de/assets/img/optimized/gebaeudereinigung-mainz-hero.webp"
+      },
+      "inLanguage": "de-DE"
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://mia-reinigung.de/#localbusiness",
+      "name": "MIA Reinigung",
+      "alternateName": "Reinigungsfirma MIA",
+      "url": "https://mia-reinigung.de/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mia-reinigung.de/LOGO_ORIG_123.png?v=2"
+      },
+      "image": [
+        "https://mia-reinigung.de/LOGO_ORIG_123.png?v=2",
+        "https://mia-reinigung.de/assets/img/optimized/gebaeudereinigung-mainz-hero.webp"
+      ],
+      "telephone": "+49 1521 2975639",
+      "email": "miareinigung.info@gmail.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hochheimer Straße 72",
+        "postalCode": "55246",
+        "addressLocality": "Mainz-Kostheim",
+        "addressRegion": "Hessen",
+        "addressCountry": "DE"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Mainz"
+        },
+        {
+          "@type": "City",
+          "name": "Wiesbaden"
+        },
+        {
+          "@type": "Place",
+          "name": "Mainz-Kostheim"
+        }
+      ],
+      "knowsAbout": [
+        "Gebäudereinigung Mainz",
+        "Gebäudereinigung Wiesbaden",
+        "Büroreinigung Mainz",
+        "Büroreinigung Wiesbaden",
+        "Unterhaltsreinigung",
+        "Treppenhausreinigung",
+        "Praxisreinigung",
+        "Fensterreinigung"
+      ],
+      "makesOffer": [
+        {
+          "@id": "https://mia-reinigung.de/#service-gebaeudereinigung"
+        },
+        {
+          "@id": "https://mia-reinigung.de/#service-bueroreinigung"
+        },
+        {
+          "@id": "https://mia-reinigung.de/#service-unterhaltsreinigung"
+        },
+        {
+          "@id": "https://mia-reinigung.de/#service-treppenhausreinigung"
+        },
+        {
+          "@id": "https://mia-reinigung.de/#service-praxisreinigung"
+        },
+        {
+          "@id": "https://mia-reinigung.de/#service-fensterreinigung"
+        }
+      ]
+    },
+    {
+      "@type": "CleaningService",
+      "@id": "https://mia-reinigung.de/#cleaningservice",
+      "name": "MIA Reinigung - Gebäudereinigung Mainz und Wiesbaden",
+      "url": "https://mia-reinigung.de/",
+      "description": "MIA Reinigung bietet professionelle Gebäudereinigung, Büroreinigung, Unterhaltsreinigung, Treppenhausreinigung, Praxisreinigung und Fensterreinigung in Mainz und Wiesbaden.",
+      "provider": {
+        "@id": "https://mia-reinigung.de/#localbusiness"
+      },
+      "telephone": "+49 1521 2975639",
+      "email": "miareinigung.info@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hochheimer Straße 72",
+        "postalCode": "55246",
+        "addressLocality": "Mainz-Kostheim",
+        "addressRegion": "Hessen",
+        "addressCountry": "DE"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Mainz"
+        },
+        {
+          "@type": "City",
+          "name": "Wiesbaden"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Reinigungsleistungen in Mainz und Wiesbaden",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@id": "https://mia-reinigung.de/#service-gebaeudereinigung"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@id": "https://mia-reinigung.de/#service-bueroreinigung"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@id": "https://mia-reinigung.de/#service-unterhaltsreinigung"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@id": "https://mia-reinigung.de/#service-treppenhausreinigung"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@id": "https://mia-reinigung.de/#service-praxisreinigung"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@id": "https://mia-reinigung.de/#service-fensterreinigung"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://mia-reinigung.de/#service-gebaeudereinigung",
+      "name": "Gebäudereinigung Mainz und Wiesbaden",
+      "serviceType": "Gebäudereinigung",
+      "description": "Professionelle Gebäudereinigung für Büros, Praxen, Treppenhäuser, Gewerbeflächen und Immobilien in Mainz und Wiesbaden.",
+      "provider": {
+        "@id": "https://mia-reinigung.de/#localbusiness"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Mainz"
+        },
+        {
+          "@type": "City",
+          "name": "Wiesbaden"
+        }
+      ],
+      "url": "https://mia-reinigung.de/"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://mia-reinigung.de/#service-bueroreinigung",
+      "name": "Büroreinigung Mainz und Wiesbaden",
+      "serviceType": "Büroreinigung",
+      "description": "Regelmäßige Büroreinigung für Arbeitsplätze, Besprechungsräume, Teeküchen, Sanitärbereiche und Böden in Mainz und Wiesbaden.",
+      "provider": {
+        "@id": "https://mia-reinigung.de/#localbusiness"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Mainz"
+        },
+        {
+          "@type": "City",
+          "name": "Wiesbaden"
+        }
+      ],
+      "url": "https://mia-reinigung.de/leistungen/bueroreinigung-mainz.html"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://mia-reinigung.de/#service-unterhaltsreinigung",
+      "name": "Unterhaltsreinigung Mainz und Wiesbaden",
+      "serviceType": "Unterhaltsreinigung",
+      "description": "Planbare Unterhaltsreinigung nach festem Reinigungsplan für Gewerbeobjekte, Büros, Praxen und Hausverwaltungen.",
+      "provider": {
+        "@id": "https://mia-reinigung.de/#localbusiness"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Mainz"
+        },
+        {
+          "@type": "City",
+          "name": "Wiesbaden"
+        }
+      ],
+      "url": "https://mia-reinigung.de/leistungen/unterhaltsreinigung-mainz.html"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://mia-reinigung.de/#service-treppenhausreinigung",
+      "name": "Treppenhausreinigung Mainz und Wiesbaden",
+      "serviceType": "Treppenhausreinigung",
+      "description": "Treppenhausreinigung für Mehrfamilienhäuser, Hausverwaltungen, Eingangsbereiche, Geländer und Gemeinschaftsflächen in Mainz und Wiesbaden.",
+      "provider": {
+        "@id": "https://mia-reinigung.de/#localbusiness"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Mainz"
+        },
+        {
+          "@type": "City",
+          "name": "Wiesbaden"
+        }
+      ],
+      "url": "https://mia-reinigung.de/leistungen/treppenhausreinigung-mainz.html"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://mia-reinigung.de/#service-praxisreinigung",
+      "name": "Praxisreinigung Mainz und Wiesbaden",
+      "serviceType": "Praxisreinigung",
+      "description": "Hygienische Praxisreinigung für Wartebereiche, Empfang, Behandlungsräume, Sanitärbereiche und Kontaktflächen.",
+      "provider": {
+        "@id": "https://mia-reinigung.de/#localbusiness"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Mainz"
+        },
+        {
+          "@type": "City",
+          "name": "Wiesbaden"
+        }
+      ],
+      "url": "https://mia-reinigung.de/leistungen/praxisreinigung-mainz.html"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://mia-reinigung.de/#service-fensterreinigung",
+      "name": "Fensterreinigung Mainz und Wiesbaden",
+      "serviceType": "Fensterreinigung",
+      "description": "Streifenfreie Fensterreinigung, Glasreinigung und Rahmenreinigung für Büros, Praxen, Schaufenster und Gewerbeobjekte.",
+      "provider": {
+        "@id": "https://mia-reinigung.de/#localbusiness"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Mainz"
+        },
+        {
+          "@type": "City",
+          "name": "Wiesbaden"
+        }
+      ],
+      "url": "https://mia-reinigung.de/leistungen/fensterreinigung-mainz.html"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mia-reinigung.de/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Welche Leistungen umfasst die Gebäudereinigung Mainz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unsere Gebäudereinigung Mainz umfasst Büroreinigung, Unterhaltsreinigung, Treppenhausreinigung, Praxisreinigung und Fensterreinigung. Je nach Objekt reinigen wir Arbeitsplätze, Böden, Oberflächen, Sanitärbereiche, Küchen, Eingänge, Treppen, Geländer, Wartebereiche, Behandlungsräume, Glasflächen und Rahmen. Der konkrete Leistungsumfang wird vor Beginn individuell vereinbart."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Für welche Kunden in Mainz arbeitet MIA Reinigung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wir arbeiten für Unternehmen, Büros, Praxen, Hausverwaltungen, Eigentümergemeinschaften, Gewerbebetriebe und private Auftraggeber in Mainz. Besonders häufig werden regelmäßige Unterhaltsreinigung, Büroreinigung, Treppenhausreinigung und Fensterreinigung angefragt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie berechnet MIA Reinigung den Preis für Gebäudereinigung in Mainz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der Preis hängt von Objektgröße, Verschmutzungsgrad, Bodenbelägen, Reinigungsintervall, Hygieneanforderungen und gewünschten Zusatzleistungen ab. Nach einer Abstimmung oder Besichtigung erhalten Sie ein transparentes Angebot. So wissen Sie vor dem Start, welche Leistungen enthalten sind und welche Kosten entstehen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sind Reinigungstermine außerhalb der Öffnungszeiten möglich?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Viele Reinigungen erfolgen frühmorgens, abends oder nach individueller Absprache, damit der laufende Betrieb in Büros, Praxen und Gewerbeobjekten möglichst nicht gestört wird."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bringt MIA Reinigung Reinigungsmittel und Geräte mit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In der Regel bringen wir die benötigten Reinigungsmittel und Geräte mit. Wenn in Ihrem Objekt bestimmte Produkte verwendet werden sollen, stimmen wir das vorab ab. Wichtig ist, dass Reinigungsmittel, Oberflächen und Hygieneanforderungen zusammenpassen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie schnell kann ein Angebot erstellt werden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wenn alle Informationen vorliegen, können wir oft kurzfristig eine erste Einschätzung geben. Für ein genaues Angebot zur Gebäudereinigung Mainz sind Angaben zu Objektart, Größe, Adresse, gewünschter Leistung und Reinigungsintervall hilfreich. Bei größeren Objekten empfehlen wir eine Besichtigung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich einzelne Leistungen kombinieren?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Viele Kunden kombinieren zum Beispiel Unterhaltsreinigung mit Fensterreinigung oder Büroreinigung mit regelmäßiger Sanitärreinigung. Auch Treppenhausreinigung und Objektpflege lassen sich sinnvoll verbinden. MIA Reinigung stellt den Leistungsplan passend zu Ihrem Gebäude in Mainz zusammen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bietet MIA Reinigung auch Gebäudereinigung in Wiesbaden an?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. MIA Reinigung betreut Kunden in Mainz und Wiesbaden. Zum Einsatzgebiet gehören unter anderem Büros, Praxen, Treppenhäuser, Gewerbeflächen und Immobilien von Hausverwaltungen."
+          }
+        }
+      ]
     }
+  ]
+}
+  </script>
+  <style>
+    :root { --accent:#0f7bff; --accent-soft:rgba(15,123,255,.08); --dark:#111827; --muted:#6b7280; }
+    * { scroll-behavior:smooth; }
+    body { font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:#111827; background:#f9fafb; }
+    .navbar { padding-top:.75rem; padding-bottom:.75rem; background:rgba(255,255,255,.96)!important; backdrop-filter:blur(10px); }
+    .navbar-brand span { font-size:1.15rem; letter-spacing:.03em; }
+    .nav-link { font-weight:500; color:#4b5563!important; }
+    .nav-link:hover,.nav-link.active { color:var(--accent)!important; }
+    .btn-accent { background:var(--accent); border-color:var(--accent); color:#fff; font-weight:600; border-radius:999px; padding-inline:1.2rem; }
+    .btn-accent:hover { background:#0c62cc; border-color:#0c62cc; color:#fff; }
+    .hero { position:relative; min-height:76vh; display:flex; align-items:center; color:#fff; overflow:hidden; }
+    .hero-bg { position:absolute; inset:0; background-size:cover; background-position:center; filter:brightness(.78); transform:scale(1.03); }
+    .hero-overlay { position:absolute; inset:0; background:radial-gradient(circle at top left,rgba(15,123,255,.25),transparent 55%),linear-gradient(120deg,rgba(15,123,255,.18),rgba(15,123,255,0)); mix-blend-mode:multiply; }
+    .hero-inner { position:relative; z-index:2; }
+    .hero-badge { display:inline-flex; align-items:center; gap:.5rem; background:rgba(15,123,255,.14); border-radius:999px; padding:.35rem .9rem; font-size:.8rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase; }
+    .hero h1 { font-weight:700; letter-spacing:-.03em; }
+    .hero-lead { font-size:1.1rem; max-width:42rem; }
+    .hero-meta { font-size:.9rem; opacity:.92; }
+    .hero-card,.contact-card { background:#fff; border:1px solid #e5e7eb; border-radius:1rem; padding:1.5rem; box-shadow:0 18px 40px rgba(15,23,42,.08); }
+    .hero-card { background:rgba(17,24,39,.84); border-color:rgba(255,255,255,.08); color:#fff; box-shadow:0 20px 50px rgba(15,23,42,.55); }
+    .hero-card .small { color:#d1d5db; }
+    .hero-check { color:#a7f3d0; }
+    .section { padding-block:4.5rem; }
+    .section-label { text-transform:uppercase; letter-spacing:.17em; font-size:.75rem; font-weight:700; color:var(--accent); }
+    .section-title { font-weight:700; letter-spacing:-.02em; }
+    .section-text { color:var(--muted); max-width:44rem; margin-inline:auto; }
+    .lift { transition:transform .18s ease, box-shadow .18s ease; }
+    .lift:hover { transform:translateY(-4px); box-shadow:0 20px 40px rgba(15,23,42,.12); }
+    .card-service { border-radius:1rem; border:1px solid #e5e7eb; overflow:hidden; background:#fff; height:100%; }
+    .card-service img { height:190px; object-fit:cover; }
+    .chip { display:inline-flex; align-items:center; gap:.4rem; padding:.25rem .7rem; border-radius:999px; font-size:.75rem; background:#f3f4f6; color:#4b5563; }
+    .feature-icon { width:2.75rem; height:2.75rem; border-radius:999px; display:inline-flex; align-items:center; justify-content:center; background:var(--accent-soft); color:var(--accent); margin-bottom:.75rem; }
+    .step { position:relative; padding-left:2.75rem; }
+    .step-number { position:absolute; left:0; top:0; width:2rem; height:2rem; border-radius:999px; background:var(--accent-soft); color:var(--accent); display:flex; align-items:center; justify-content:center; font-weight:600; font-size:.9rem; }
+    .step + .step { margin-top:1.5rem; }
+    .testimonial { border-radius:1rem; padding:1.5rem; background:#fff; border:1px solid #e5e7eb; height:100%; }
+    .testimonial .name { font-weight:600; }
+    .testimonial .role { font-size:.85rem; color:var(--muted); }
+    .contact-meta i { font-size:1.1rem; width:1.5rem; color:var(--accent); }
+    footer { background:#020617; color:#9ca3af; padding-block:2.75rem; font-size:.9rem; }
+    footer a { color:#e5e7eb; text-decoration:none; }
+    footer a:hover { color:#fff; text-decoration:underline; }
+    @media (max-width:991.98px) { .hero { min-height:auto; padding-block:3.5rem; } }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="#start">
-      <img src="LOGO_ORIG_123.png" alt="GebaeudereinigungReinigungsfirma MIA" height="70">
-      <span class="fw-semibold">Reinigungsfirma MIA</span>
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="LOGO_ORIG_123.png" alt="MIA Reinigung Gebäudereinigung Mainz" width="70" height="70" decoding="async">
+      <span class="fw-semibold">MIA Reinigung</span>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Navigation öffnen">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="nav">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-        <li class="nav-item"><a class="nav-link" href="#leistungen">Leistungen</a></li>
-        <li class="nav-item"><a class="nav-link" href="#warum">Warum wir</a></li>
-        <li class="nav-item"><a class="nav-link" href="#ablauf">Ablauf</a></li>
-        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-        <li class="nav-item"><a class="btn btn-accent ms-lg-2" href="#kontakt"><i class="bi bi-calendar-check me-1"></i> Angebot anfragen</a></li>
+        <li class="nav-item"><a class="nav-link active" href="index.html">Gebäudereinigung Mainz</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Leistungen</a>
+          <ul class="dropdown-menu"><li><a class="dropdown-item" href="leistungen/bueroreinigung-mainz.html">Büroreinigung Mainz</a></li><li><a class="dropdown-item" href="leistungen/unterhaltsreinigung-mainz.html">Unterhaltsreinigung Mainz</a></li><li><a class="dropdown-item" href="leistungen/treppenhausreinigung-mainz.html">Treppenhausreinigung Mainz</a></li><li><a class="dropdown-item" href="leistungen/praxisreinigung-mainz.html">Praxisreinigung Mainz</a></li><li><a class="dropdown-item" href="leistungen/fensterreinigung-mainz.html">Fensterreinigung Mainz</a></li></ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Wiesbaden</a>
+          <ul class="dropdown-menu"><li><a class="dropdown-item" href="wiesbaden/gebaeudereinigung-wiesbaden.html">Gebäudereinigung Wiesbaden</a></li><li><a class="dropdown-item" href="wiesbaden/bueroreinigung-wiesbaden.html">Büroreinigung Wiesbaden</a></li><li><a class="dropdown-item" href="wiesbaden/treppenhausreinigung-wiesbaden.html">Treppenhausreinigung Wiesbaden</a></li></ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="ueber-uns.html">Über uns</a></li>
+        <li class="nav-item"><a class="nav-link" href="referenzen.html">Referenzen</a></li>
+        <li class="nav-item"><a class="nav-link" href="ratgeber/">Ratgeber</a></li>
+        <li class="nav-item"><a class="btn btn-accent ms-lg-2" href="kontakt.html"><i class="bi bi-calendar-check me-1"></i> Angebot anfragen</a></li>
       </ul>
     </div>
   </div>
 </nav>
-
-<!-- HERO -->
-<header id="start" class="hero">
-  <div class="hero-bg"></div>
+<header class="hero">
+  <div class="hero-bg" style="background-image:url('assets/img/optimized/gebaeudereinigung-mainz-hero.webp')"></div>
   <div class="hero-overlay"></div>
   <div class="container hero-inner py-5">
     <div class="row g-4 align-items-center">
       <div class="col-lg-7">
-        <div class="hero-badge mb-3">
-          <i class="bi bi-stars"></i>
-          <span>Gebaeudereinigung& Büroreinigung</span>
-        </div>
-        <h1 class="display-5 mb-3">Sauberkeit, auf die Sie sich verlassen können.</h1>
-        <p class="hero-lead mb-3">
-          Reinigungsfirma MIA übernimmt die professionelle Reinigung von Büros, Treppenhäusern und Gewerbeflächen – gründlich, termintreu und diskret.
-        </p>
-        <p class="hero-meta mb-4">
-          <i class="bi bi-geo-alt me-1"></i> Ihr regionaler Partner für Mainz, Wiesbaden & Umgebung &nbsp;•&nbsp; Flexible Reinigungstermine &nbsp;•&nbsp; Festpreise nach Besichtigung
-        </p>
+        <div class="hero-badge mb-3"><i class="bi bi-stars"></i><span>MIA Reinigung in Mainz</span></div>
+        <h1 class="display-5 mb-3">Gebäudereinigung Mainz</h1>
+        <p class="hero-lead mb-3">MIA Reinigung ist Ihr Ansprechpartner für professionelle Gebäudereinigung in Mainz. Wir reinigen Büros, Praxen, Treppenhäuser, Fenster und Gewerbeflächen gründlich, zuverlässig und mit klaren Absprachen.</p>
+        <p class="hero-meta mb-4"><i class="bi bi-geo-alt me-1"></i> Regional für Mainz, Mainz-Kostheim, Wiesbaden & Umgebung &nbsp;•&nbsp; Flexible Termine &nbsp;•&nbsp; Festpreise nach Besichtigung</p>
         <div class="d-flex flex-wrap gap-3">
-          <a href="#kontakt" class="btn btn-accent btn-lg">
-            <i class="bi bi-calendar-week me-2"></i>
-            Unverbindliche Anfrage
-          </a>
-          <a href="tel:+4915212975639" class="btn btn-outline-light btn-lg">
-            <i class="bi bi-telephone-outbound me-2"></i>
-            Direkt anrufen
-          </a>
+          <a href="kontakt.html" class="btn btn-accent btn-lg"><i class="bi bi-calendar-week me-2"></i> Unverbindliche Anfrage</a>
+          <a href="tel:+4915212975639" class="btn btn-outline-light btn-lg"><i class="bi bi-telephone-outbound me-2"></i> Direkt anrufen</a>
         </div>
       </div>
       <div class="col-lg-5">
         <div class="hero-card mt-4 mt-lg-0">
-          <h5 class="mb-1">Jetzt Reinigung anfragen</h5>
-          <p class="small mb-3">In wenigen Schritten zu Ihrem individuellen Angebot.</p>
+          <h2 class="h5 mb-1">Jetzt Reinigung anfragen</h2>
+          <p class="small mb-3">In wenigen Schritten zu Ihrem individuellen Angebot für Gebäudereinigung in Mainz.</p>
           <ul class="list-unstyled mb-3">
-            <li class="d-flex gap-2 mb-2">
-              <span class="hero-check"><i class="bi bi-check-circle-fill"></i></span>
-              <span>Kurzbeschreibung Ihrer Räumlichkeiten (Büro, Treppenhaus, Wohnung …)</span>
-            </li>
-            <li class="d-flex gap-2 mb-2">
-              <span class="hero-check"><i class="bi bi-check-circle-fill"></i></span>
-              <span>Wunschtermine und Reinigungsintervalle festlegen</span>
-            </li>
-            <li class="d-flex gap-2 mb-2">
-              <span class="hero-check"><i class="bi bi-check-circle-fill"></i></span>
-              <span>Transparenter Festpreis – keine versteckten Kosten</span>
-            </li>
+            <li class="d-flex gap-2 mb-2"><span class="hero-check"><i class="bi bi-check-circle-fill"></i></span><span>Kurzbeschreibung Ihrer Räumlichkeiten</span></li>
+            <li class="d-flex gap-2 mb-2"><span class="hero-check"><i class="bi bi-check-circle-fill"></i></span><span>Wunschtermine und Reinigungsintervalle festlegen</span></li>
+            <li class="d-flex gap-2 mb-2"><span class="hero-check"><i class="bi bi-check-circle-fill"></i></span><span>Transparentes Angebot ohne versteckte Kosten</span></li>
           </ul>
-          <a href="#kontakt" class="btn btn-accent w-100">
-            <i class="bi bi-envelope-open me-2"></i> Anfrageformular öffnen
-          </a>
+          <a href="kontakt.html" class="btn btn-accent w-100"><i class="bi bi-envelope-open me-2"></i> Anfrageformular öffnen</a>
         </div>
       </div>
     </div>
   </div>
-</header>
-
-<!-- LEISTUNGEN -->
-<section id="leistungen" class="section">
+</header><section class="section">
   <div class="container">
     <div class="text-center mb-5">
       <div class="section-label mb-2">Leistungen</div>
-      <h2 class="section-title mb-2">Unsere Reinigungsleistungen</h2>
-      <p class="section-text">
-        Wir bieten Ihnen eine breite Palette an Reinigungsdiensten für gewerbliche und private Objekte. 
-        Die Leistungen werden individuell auf Ihr Objekt und Ihren Bedarf abgestimmt.
-      </p>
+      <h2 class="section-title mb-2">Reinigungsleistungen für Mainz</h2>
+      <p class="section-text">Unsere Gebäudereinigung in Mainz wird individuell auf Objektart, Reinigungsintervall und Hygieneanforderungen abgestimmt. MIA Reinigung betreut gewerbliche Flächen, Praxen, Hausverwaltungen und private Auftraggeber mit planbaren Abläufen und persönlicher Kommunikation.</p>
     </div>
-
     <div class="row g-4">
-
-      <!-- Treppenhaus -->
       <div class="col-md-6 col-lg-4">
-        <div class="card card-service lift h-100">
-          <img src="nilotpal-maity-4lM_LKYpiZU-unsplash.jpg" class="card-img-top" alt="Treppenhausreinigung">
-          <div class="card-body">
-            <span class="chip mb-2"><i class="bi bi-stairs"></i> Objektpflege</span>
-            <h5 class="card-title">Treppen- & Treppenhausreinigung</h5>
-            <p class="card-text text-muted">
-              Saubere Eingangsbereiche und Treppenhäuser für einen einladenden ersten Eindruck bei Mietern und Besuchern.
-            </p>
-            <ul class="small text-muted mb-0">
-              <li>Wischen & Kehren</li>
-              <li>Geländer & Fensterbänke</li>
-              <li>Regelmäßige Objektkontrolle</li>
-            </ul>
+        <a class="text-decoration-none text-reset" href="leistungen/bueroreinigung-mainz.html">
+          <div class="card card-service lift">
+            <picture>
+              <source srcset="assets/img/optimized/bueroreinigung-mainz.webp" type="image/webp">
+              <img src="kate-sade-2zZp12ChxhU-unsplash.jpg" class="card-img-top" alt="Büroreinigung Mainz" width="768" height="510" loading="lazy" decoding="async">
+            </picture>
+            <div class="card-body">
+              <span class="chip mb-2"><i class="bi bi-stars"></i> Reinigungsservice</span>
+              <h3 class="h5 card-title">Büroreinigung Mainz</h3>
+              <p class="card-text text-muted">Regelmäßige Reinigung von Arbeitsplätzen, Böden, Besprechungsräumen, Teeküchen und Sanitärbereichen in Mainzer Unternehmen.</p>
+            </div>
           </div>
-        </div>
-      </div>
-      
-      <!-- Büroreinigung -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card card-service lift h-100">
-          <img src="kate-sade-2zZp12ChxhU-unsplash.jpg" class="card-img-top" alt="Büroreinigung">
-          <div class="card-body">
-            <span class="chip mb-2"><i class="bi bi-building"></i> Büro & Gewerbe</span>
-            <h5 class="card-title">Büro- & Gebäudereinigung</h5>
-            <p class="card-text text-muted">
-              Regelmäßige Reinigung von Büroräumen, Fluren und Sanitärbereichen für ein gepflegtes und hygienisches Arbeitsumfeld.
-            </p>
-            <ul class="small text-muted mb-0">
-              <li>Unterhaltsreinigung</li>
-              <li>Oberflächen- & Bodenreinigung</li>
-              <li>Entleerung von Papierkörben</li>
-            </ul>
+        </a>
+      </div><div class="col-md-6 col-lg-4">
+        <a class="text-decoration-none text-reset" href="leistungen/unterhaltsreinigung-mainz.html">
+          <div class="card card-service lift">
+            <picture>
+              <source srcset="assets/img/optimized/unterhaltsreinigung-mainz.webp" type="image/webp">
+              <img src="Buerroreinigung-768x432.jpg" class="card-img-top" alt="Unterhaltsreinigung Mainz" width="768" height="432" loading="lazy" decoding="async">
+            </picture>
+            <div class="card-body">
+              <span class="chip mb-2"><i class="bi bi-stars"></i> Reinigungsservice</span>
+              <h3 class="h5 card-title">Unterhaltsreinigung Mainz</h3>
+              <p class="card-text text-muted">Laufende Objektpflege in Mainz nach festem Reinigungsplan, abgestimmten Intervallen und klaren Qualitätsstandards.</p>
+            </div>
           </div>
-        </div>
+        </a>
+      </div><div class="col-md-6 col-lg-4">
+        <a class="text-decoration-none text-reset" href="leistungen/treppenhausreinigung-mainz.html">
+          <div class="card card-service lift">
+            <picture>
+              <source srcset="assets/img/optimized/treppenhausreinigung-mainz.webp" type="image/webp">
+              <img src="nilotpal-maity-4lM_LKYpiZU-unsplash.jpg" class="card-img-top" alt="Treppenhausreinigung Mainz" width="768" height="1024" loading="lazy" decoding="async">
+            </picture>
+            <div class="card-body">
+              <span class="chip mb-2"><i class="bi bi-stars"></i> Reinigungsservice</span>
+              <h3 class="h5 card-title">Treppenhausreinigung Mainz</h3>
+              <p class="card-text text-muted">Gepflegte Eingangsbereiche, Treppen, Geländer, Briefkastenanlagen und Gemeinschaftsflächen für Immobilien in Mainz.</p>
+            </div>
+          </div>
+        </a>
+      </div><div class="col-md-6 col-lg-4">
+        <a class="text-decoration-none text-reset" href="leistungen/praxisreinigung-mainz.html">
+          <div class="card card-service lift">
+            <picture>
+              <source srcset="assets/img/optimized/praxisreinigung-mainz.webp" type="image/webp">
+              <img src="toon-lambrechts-TpNA_02AzXY-unsplash.jpg" class="card-img-top" alt="Praxisreinigung Mainz" width="768" height="512" loading="lazy" decoding="async">
+            </picture>
+            <div class="card-body">
+              <span class="chip mb-2"><i class="bi bi-stars"></i> Reinigungsservice</span>
+              <h3 class="h5 card-title">Praxisreinigung Mainz</h3>
+              <p class="card-text text-muted">Hygienische Reinigung für Behandlungsräume, Wartebereiche, Empfang, Personalräume und Sanitärzonen.</p>
+            </div>
+          </div>
+        </a>
+      </div><div class="col-md-6 col-lg-4">
+        <a class="text-decoration-none text-reset" href="leistungen/fensterreinigung-mainz.html">
+          <div class="card card-service lift">
+            <picture>
+              <source srcset="assets/img/optimized/fensterreinigung-mainz.webp" type="image/webp">
+              <img src="priscilla-du-preez-BuDD1HGco-4-unsplash.jpg" class="card-img-top" alt="Fensterreinigung Mainz" width="768" height="512" loading="lazy" decoding="async">
+            </picture>
+            <div class="card-body">
+              <span class="chip mb-2"><i class="bi bi-stars"></i> Reinigungsservice</span>
+              <h3 class="h5 card-title">Fensterreinigung Mainz</h3>
+              <p class="card-text text-muted">Streifenfreie Glas- und Rahmenreinigung für Büros, Praxen, Schaufenster und Gewerbeobjekte in Mainz.</p>
+            </div>
+          </div>
+        </a>
+      </div><div class="col-md-6 col-lg-4">
+        <a class="text-decoration-none text-reset" href="wiesbaden/gebaeudereinigung-wiesbaden.html">
+          <div class="card card-service lift">
+            <picture>
+              <source srcset="assets/img/optimized/gebaeudereinigung-wiesbaden.webp" type="image/webp">
+              <img src="gebaeudereinigung-header-01.jpg" class="card-img-top" alt="Gebäudereinigung Wiesbaden" width="768" height="280" loading="lazy" decoding="async">
+            </picture>
+            <div class="card-body">
+              <span class="chip mb-2"><i class="bi bi-stars"></i> Reinigungsservice</span>
+              <h3 class="h5 card-title">Gebäudereinigung Wiesbaden</h3>
+              <p class="card-text text-muted">Unsere Gebäudereinigung ist auch in Wiesbaden und Umgebung verfügbar.</p>
+            </div>
+          </div>
+        </a>
       </div>
-
-<!-- Praxisreinigung -->
-<div class="col-md-6 col-lg-4">
-  <div class="card card-service lift h-100">
-    <img src="toon-lambrechts-TpNA_02AzXY-unsplash.jpg" class="card-img-top" alt="Praxisreinigung">
-    <div class="card-body">
-      <span class="chip mb-2">
-        <i class="bi bi-heart-pulse"></i> Praxis & Medizin
-      </span>
-      <h5 class="card-title">Praxisreinigung</h5>
-      <p class="card-text text-muted">
-        Hygienische und zuverlässige Reinigung von Arztpraxen, Therapie- und Behandlungsräumen – 
-        abgestimmt auf sensible Bereiche und gesetzliche Vorgaben.
-      </p>
-      <ul class="small text-muted mb-0">
-        <li>Behandlungs- & Wartezimmer</li>
-        <li>Sanitär- & Personalbereiche</li>
-        <li>Reinigung nach Hygieneplänen</li>
-      </ul>
     </div>
-  </div>
-</div>
-
-
-      <!-- Glasreinigung -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card card-service lift h-100">
-          <img src="priscilla-du-preez-BuDD1HGco-4-unsplash.jpg" class="card-img-top" alt="Fenster- & Glasreinigung">
-          <div class="card-body">
-            <span class="chip mb-2"><i class="bi bi-window"></i> Glas</span>
-            <h5 class="card-title">Fenster- & Glasreinigung</h5>
-            <p class="card-text text-muted">
-              Streifenfreie Fenster, Glasfronten und Schaufenster – für ein deutlich professionelleres Erscheinungsbild.
-            </p>
-            <ul class="small text-muted mb-0">
-              <li>Innen- & Außenreinigung</li>
-              <li>Glasfassaden & Schaufenster</li>
-              <li>Rahmen- & Falzreinigung</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bau- / Grundreinigung -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card card-service lift h-100">
-          <img src="the-graphic-space-kLZs4yoR0uU-unsplash.jpg" class="card-img-top" alt="Bau- und Grundreinigung">
-          <div class="card-body">
-            <span class="chip mb-2"><i class="bi bi-tools"></i> Bau & Sanierung</span>
-            <h5 class="card-title">Bau- & Grundreinigung</h5>
-            <p class="card-text text-muted">
-              Entfernung von Bauschmutz, Farbe und Staub nach Umbau oder Renovierung. Ideal zur bezugsfertigen Übergabe.
-            </p>
-            <ul class="small text-muted mb-0">
-              <li>Grobreinigung & Feinreinigung</li>
-              <li>Boden- & Fensterpflege</li>
-              <li>Individuelle Terminabstimmung</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Spezialreinigung 
-      <div class="col-md-6 col-lg-4">
-        <div class="card card-service lift h-100">
-          <img src="Teppiche-reinigen-1024x683.jpeg" class="card-img-top" alt="Spezialreinigung">
-          <div class="card-body">
-            <span class="chip mb-2"><i class="bi bi-stars"></i> Spezial</span>
-            <h5 class="card-title">Sonder- & Spezialreinigungen</h5>
-            <p class="card-text text-muted">
-              Für besondere Anforderungen – z.&nbsp;B. Teppichreinigung, Desinfektion oder die Reinigung stark beanspruchter Flächen.
-            </p>
-            <ul class="small text-muted mb-0">
-              <li>Teppich- & Polsterreinigung</li>
-              <li>Desinfektionsreinigung</li>
-              <li>Individuelle Lösungen nach Bedarf</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>-->
-
   </div>
 </section>
 
-<!-- WARUM WIR -->
-<section id="warum" class="section">
+<section class="section bg-white">
   <div class="container">
-    <div class="row g-5 align-items-center">
+    <div class="row g-5 align-items-start">
       <div class="col-lg-5">
-        <div class="section-label mb-2">Warum Reinigungsfirma MIA?</div>
-        <h2 class="section-title mb-3">Zuverlässig, gründlich & fair.</h2>
-        <p class="text-muted mb-3">
-          Mit Reinigungsfirma MIA gewinnen Sie einen Partner, der Ihre Räumlichkeiten so behandelt, als wären es die eigenen. 
-          Wir setzen auf klare Absprachen, feste Ansprechpartner und transparent kalkulierte Preise.
-        </p>
-        <ul class="text-muted small mb-0">
-          <li>Geschultes Reinigungspersonal</li>
-          <li>Moderne Reinigungsmittel & -geräte</li>
-          <li>Dokumentierte Abläufe und Qualitätskontrollen</li>
-          <li>Reinigung außerhalb Ihrer Kernarbeitszeiten möglich</li>
-        </ul>
+        <div class="section-label mb-2">Gebäudereinigung Mainz</div>
+        <h2 class="section-title mb-3">Professionelle Reinigung für Unternehmen, Praxen und Immobilien</h2>
+        <p class="text-muted">Eine saubere Immobilie ist in Mainz mehr als ein gepflegter Eindruck. Sie wirkt auf Mitarbeitende, Kunden, Patienten, Mieter und Besucher. Gerade in stark genutzten Gebäuden entstehen täglich Verschmutzungen an Böden, Kontaktflächen, Sanitärbereichen, Eingängen und Fenstern. MIA Reinigung sorgt dafür, dass diese Bereiche regelmäßig, gründlich und nachvollziehbar gepflegt werden.</p>
+        <p class="text-muted mb-0">Unsere Gebäudereinigung Mainz richtet sich an Betriebe, Büros, Arztpraxen, Hausverwaltungen, Eigentümergemeinschaften und private Auftraggeber. Wir planen die Reinigung so, dass sie zu Ihrem Alltag passt: früh morgens, abends, außerhalb der Öffnungszeiten oder zu vereinbarten festen Zeitfenstern.</p>
       </div>
       <div class="col-lg-7">
         <div class="row g-3">
           <div class="col-sm-6">
-            <div class="p-3 p-md-4 bg-white border rounded-4 lift h-100">
+            <div class="p-4 bg-white border rounded-4 lift h-100">
+              <div class="feature-icon"><i class="bi bi-geo-alt"></i></div>
+              <h3 class="h6">Lokal in Mainz</h3>
+              <p class="text-muted small mb-0">Kurze Wege in Mainz, Mainz-Kostheim, Altstadt, Neustadt, Oberstadt, Bretzenheim, Gonsenheim, Weisenau und Umgebung.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-4 bg-white border rounded-4 lift h-100">
+              <div class="feature-icon"><i class="bi bi-clipboard-check"></i></div>
+              <h3 class="h6">Klare Reinigungspläne</h3>
+              <p class="text-muted small mb-0">Vor dem Start wird festgelegt, welche Bereiche wie oft gereinigt werden. So bleiben Leistung und Erwartung transparent.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-4 bg-white border rounded-4 lift h-100">
               <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
-              <h5>Zuverlässigkeit</h5>
-              <p class="text-muted small mb-0">
-                Feste Teams, planbare Einsätze und pünktliche Durchführung – wir halten unsere Zusagen.
-              </p>
+              <h3 class="h6">Diskret und zuverlässig</h3>
+              <p class="text-muted small mb-0">Unsere Reinigung erfolgt pünktlich, sorgfältig und mit Rücksicht auf Mitarbeiter, Patienten, Kunden und Bewohner.</p>
             </div>
           </div>
           <div class="col-sm-6">
-            <div class="p-3 p-md-4 bg-white border rounded-4 lift h-100">
-              <div class="feature-icon"><i class="bi bi-stars"></i></div>
-              <h5>Qualität</h5>
-              <p class="text-muted small mb-0">
-                Sorgfältige Reinigungsarbeiten auf Basis klarer Checklisten und Standards.
-              </p>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="p-3 p-md-4 bg-white border rounded-4 lift h-100">
-              <div class="feature-icon"><i class="bi bi-arrow-repeat"></i></div>
-              <h5>Flexibilität</h5>
-              <p class="text-muted small mb-0">
-                Einmalig, regelmäßig oder kurzfristig – wir richten uns nach Ihren Anforderungen.
-              </p>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="p-3 p-md-4 bg-white border rounded-4 lift h-100">
-              <div class="feature-icon"><i class="bi bi-emoji-smile"></i></div>
-              <h5>Kundenzufriedenheit</h5>
-              <p class="text-muted small mb-0">
-                Direkter Kontakt, kurze Wege – und ein Ergebnis, mit dem Sie langfristig zufrieden sind.
-              </p>
+            <div class="p-4 bg-white border rounded-4 lift h-100">
+              <div class="feature-icon"><i class="bi bi-cash-coin"></i></div>
+              <h3 class="h6">Transparente Angebote</h3>
+              <p class="text-muted small mb-0">Sie erhalten ein passendes Angebot nach Objektgröße, Leistungsumfang, Reinigungsintervall und gewünschten Zusatzleistungen.</p>
             </div>
           </div>
         </div>
@@ -589,381 +640,282 @@
   </div>
 </section>
 
-<!-- ABLAUF -->
-<section id="ablauf" class="section bg-white">
+<section class="section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-label mb-2">Leistungen im Detail</div>
+      <h2 class="section-title mb-2">Was gehört zur Gebäudereinigung in Mainz?</h2>
+      <p class="section-text">Gebäudereinigung ist ein Oberbegriff für viele Reinigungsaufgaben rund um ein Objekt. Entscheidend ist nicht nur, dass gereinigt wird, sondern dass die Reinigung regelmäßig, nachvollziehbar und passend zur Nutzung des Gebäudes erfolgt.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="p-4 bg-white border rounded-4 h-100">
+          <h3 class="h5">Büroreinigung Mainz</h3>
+          <p class="text-muted">Bei der Büroreinigung in Mainz reinigen wir Arbeitsplätze, Schreibtische, Türen, Lichtschalter, Besprechungsräume, Küchenbereiche, Sanitäranlagen und Böden. Für Unternehmen ist wichtig, dass die Reinigung den Betrieb nicht stört. Deshalb stimmen wir Uhrzeiten und Intervalle auf Ihre Arbeitsabläufe ab. Besonders häufig werden Büros ein- bis fünfmal pro Woche gereinigt, abhängig von Mitarbeiterzahl, Besucherfrequenz und Nutzung der Räume.</p>
+          <a href="leistungen/bueroreinigung-mainz.html" class="btn btn-outline-primary btn-sm">Mehr zur Büroreinigung</a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="p-4 bg-white border rounded-4 h-100">
+          <h3 class="h5">Unterhaltsreinigung Mainz</h3>
+          <p class="text-muted">Die Unterhaltsreinigung ist die regelmäßige Reinigung wiederkehrender Bereiche. Dazu gehören Böden, Oberflächen, Sanitärräume, Küchen, Flure, Eingänge und Abfallbehälter. In Mainz wird diese Leistung besonders von Büros, Praxen, Hausverwaltungen und Gewerbeobjekten angefragt. MIA Reinigung erstellt dafür einen festen Leistungsplan, damit alle Aufgaben klar dokumentiert sind.</p>
+          <a href="leistungen/unterhaltsreinigung-mainz.html" class="btn btn-outline-primary btn-sm">Mehr zur Unterhaltsreinigung</a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="p-4 bg-white border rounded-4 h-100">
+          <h3 class="h5">Treppenhausreinigung Mainz</h3>
+          <p class="text-muted">Treppenhäuser werden täglich von vielen Personen genutzt. Staub, Straßenschmutz, Spuren an Geländern und Verschmutzungen im Eingangsbereich fallen schnell auf. Unsere Treppenhausreinigung in Mainz umfasst Treppen, Podeste, Geländer, Fensterbänke, Briefkastenbereiche und Gemeinschaftsflächen. Für Hausverwaltungen und Eigentümergemeinschaften ist diese Leistung ein wichtiger Bestandteil der Objektpflege.</p>
+          <a href="leistungen/treppenhausreinigung-mainz.html" class="btn btn-outline-primary btn-sm">Mehr zur Treppenhausreinigung</a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="p-4 bg-white border rounded-4 h-100">
+          <h3 class="h5">Praxisreinigung und Fensterreinigung Mainz</h3>
+          <p class="text-muted">In Praxen ist Hygiene besonders sensibel. Wir reinigen Wartebereiche, Empfang, Behandlungsräume, Sanitärzonen und Kontaktflächen nach abgestimmten Vorgaben. Ergänzend sorgt die Fensterreinigung in Mainz für klare Glasflächen, gepflegte Rahmen und einen professionellen ersten Eindruck. Beide Leistungen lassen sich einzeln oder als Teil der regelmäßigen Gebäudereinigung buchen.</p>
+          <a href="leistungen/praxisreinigung-mainz.html" class="btn btn-outline-primary btn-sm me-2">Praxisreinigung</a>
+          <a href="leistungen/fensterreinigung-mainz.html" class="btn btn-outline-primary btn-sm">Fensterreinigung</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-white">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <div class="section-label mb-2">Mainz & Umgebung</div>
+        <h2 class="section-title mb-3">Lokaler Reinigungsservice mit kurzen Wegen</h2>
+        <p class="text-muted">Mainz ist vielseitig: Büroflächen in der Innenstadt, Praxen in der Oberstadt, Mehrfamilienhäuser in Gonsenheim, Gewerbeflächen in Weisenau, Objekte in Bretzenheim oder Mainz-Kostheim. Jede Lage und jede Nutzung bringt andere Anforderungen an die Gebäudereinigung mit sich. Deshalb arbeitet MIA Reinigung nicht mit pauschalen Standardpaketen, sondern mit einer Abstimmung direkt am Objekt.</p>
+        <p class="text-muted">Für Kunden in Mainz bedeutet das: kurze Reaktionszeiten, persönliche Erreichbarkeit und Reinigungstermine, die realistisch geplant werden. Wenn Sie eine regelmäßige Gebäudereinigung in Mainz suchen, prüfen wir gemeinsam, welche Bereiche täglich, wöchentlich oder in größeren Abständen gereinigt werden sollten. So bleibt das Objekt gepflegt, ohne unnötige Leistungen zu beauftragen.</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="contact-card">
+          <h3 class="h5">Direkt Angebot für Mainz anfragen</h3>
+          <p class="text-muted">Senden Sie uns die wichtigsten Eckdaten zu Ihrem Objekt: Adresse in Mainz, Quadratmeterzahl, Objektart, gewünschte Leistungen und Reinigungsintervall. Wir melden uns mit einer ersten Einschätzung und besprechen die nächsten Schritte.</p>
+          <ul class="text-muted small">
+            <li>Büro, Praxis, Treppenhaus oder Gewerbefläche</li>
+            <li>Einmalige Reinigung oder regelmäßige Unterhaltsreinigung</li>
+            <li>Flexible Termine nach Absprache</li>
+            <li>Transparentes Angebot nach Besichtigung oder genauer Abstimmung</li>
+          </ul>
+          <a href="kontakt.html" class="btn btn-accent"><i class="bi bi-send me-2"></i> Angebot für Mainz anfragen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="container">
     <div class="text-center mb-5">
       <div class="section-label mb-2">Ablauf</div>
       <h2 class="section-title mb-2">So einfach funktioniert die Zusammenarbeit</h2>
-      <p class="section-text">
-        Von der ersten Anfrage bis zur laufenden Reinigung – wir führen Sie transparent durch alle Schritte.
-      </p>
+      <p class="section-text">Von der ersten Anfrage bis zur laufenden Reinigung führen wir Sie transparent durch alle Schritte. Eine gute Gebäudereinigung in Mainz beginnt mit klaren Informationen und endet mit einem zuverlässig gepflegten Objekt.</p>
     </div>
-
     <div class="row g-5">
       <div class="col-lg-6">
-        <div class="step">
-          <div class="step-number">1</div>
-          <h5>Kontakt & erste Einschätzung</h5>
-          <p class="text-muted small mb-0">
-            Sie senden uns eine Anfrage mit Angaben zu Objektart, Größe und Leistungsumfang – gerne telefonisch oder über das Formular.
-          </p>
-        </div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <h5>Besichtigung & Angebot</h5>
-          <p class="text-muted small mb-0">
-            Wir besichtigen das Objekt, klären alle Details und erstellen ein transparentes, unverbindliches Angebot zum Festpreis.
-          </p>
-        </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <h5>Start der Reinigung</h5>
-          <p class="text-muted small mb-0">
-            Nach Ihrer Zusage starten wir zum vereinbarten Termin. Anpassungen der Leistung sind jederzeit in Abstimmung möglich.
-          </p>
-        </div>
+        <div class="step"><div class="step-number">1</div><h3 class="h5">Kontakt & erste Einschätzung</h3><p class="text-muted small mb-0">Sie senden uns Angaben zu Objektart, Standort in Mainz, Größe und gewünschtem Leistungsumfang. Auf dieser Basis klären wir, ob Büroreinigung, Unterhaltsreinigung, Treppenhausreinigung, Praxisreinigung oder Fensterreinigung im Mittelpunkt steht.</p></div>
+        <div class="step"><div class="step-number">2</div><h3 class="h5">Besichtigung & Angebot</h3><p class="text-muted small mb-0">Wir besprechen die Flächen, Laufwege, Sanitärbereiche, Bodenbeläge und gewünschten Intervalle. Anschließend erhalten Sie ein transparentes Angebot mit nachvollziehbarem Leistungsumfang.</p></div>
+        <div class="step"><div class="step-number">3</div><h3 class="h5">Start der Reinigung</h3><p class="text-muted small mb-0">Nach Ihrer Zusage starten wir zum vereinbarten Termin. Änderungen am Reinigungsplan können später abgestimmt werden, wenn sich Nutzung oder Bedarf ändern.</p></div>
       </div>
-      <div class="col-lg-6">
-        <div class="row g-3">
-          <div class="col-12">
-            <div class="contact-card lift">
-              <h5 class="mb-3"><i class="bi bi-telephone-outbound me-2"></i>Direkt Kontakt aufnehmen</h5>
-              <div class="contact-meta mb-2 d-flex align-items-start gap-2">
-                <i class="bi bi-telephone"></i>
-                <div>
-                  <div class="small text-muted">Telefon</div>
-                  <a href="tel:+49 1521 2975639">+49 1521 2975639</a>
-                </div>
-              </div>
-              <div class="contact-meta mb-2 d-flex align-items-start gap-2">
-                <i class="bi bi-envelope"></i>
-                <div>
-                  <div class="small text-muted">E-Mail</div>
-                  <a href="mailto:info@firma-mia.de">miareinigung.info@gmail.com</a>
-                </div>
-              </div>
-              <div class="contact-meta d-flex align-items-start gap-2">
-                <i class="bi bi-geo-alt"></i>
-                <div>
-                  <div class="small text-muted">Einsatzgebiet</div>
-                  <span>Bitte hier Region / Stadt ergänzen</span>
-                </div>
-              </div>
-              <hr>
-              <p class="small text-muted mb-2">
-                Teilen Sie uns mit, welche Flächen gereinigt werden sollen und in welchem Intervall Sie eine Reinigung wünschen.
-              </p>
-              <a href="#kontakt" class="btn btn-accent w-100">
-                <i class="bi bi-calendar-plus me-2"></i> Anfrage starten
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="col-lg-6"><div class="contact-card lift">
+  <h3 class="h5 mb-3"><i class="bi bi-telephone-outbound me-2"></i>Direkt Kontakt aufnehmen</h3>
+  <div class="contact-meta mb-2 d-flex align-items-start gap-2"><i class="bi bi-telephone"></i><div><div class="small text-muted">Telefon</div><a href="tel:+4915212975639">+49 1521 2975639</a></div></div>
+  <div class="contact-meta mb-2 d-flex align-items-start gap-2"><i class="bi bi-envelope"></i><div><div class="small text-muted">E-Mail</div><a href="mailto:miareinigung.info@gmail.com">miareinigung.info@gmail.com</a></div></div>
+  <div class="contact-meta mb-3 d-flex align-items-start gap-2"><i class="bi bi-geo-alt"></i><div><div class="small text-muted">Adresse</div><span>Hochheimer Straße 72<br>55246 Mainz-Kostheim</span></div></div>
+  <a href="kontakt.html" class="btn btn-accent w-100"><i class="bi bi-calendar-plus me-2"></i> Anfrage starten</a>
+</div></div>
     </div>
-
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="section">
+<section class="section bg-white">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-label mb-2">Vertrauen & Qualität</div>
+      <h2 class="section-title mb-2">Warum Kunden in Mainz MIA Reinigung beauftragen</h2>
+      <p class="section-text">Bei der Auswahl einer Reinigungsfirma zählen Zuverlässigkeit, Diskretion, klare Kommunikation und sichtbare Ergebnisse. Genau darauf ist unsere Gebäudereinigung Mainz ausgerichtet.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="p-4 bg-white border rounded-4 h-100 lift">
+          <div class="feature-icon"><i class="bi bi-person-check"></i></div>
+          <h3 class="h6">Persönlicher Kontakt</h3>
+          <p class="text-muted small mb-0">Sie haben direkte Ansprechpartner und müssen Anliegen nicht anonym über lange Servicewege klären.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="p-4 bg-white border rounded-4 h-100 lift">
+          <div class="feature-icon"><i class="bi bi-calendar-check"></i></div>
+          <h3 class="h6">Planbare Termine</h3>
+          <p class="text-muted small mb-0">Reinigungseinsätze werden so geplant, dass sie zum Objekt, zur Öffnungszeit und zur Nutzung passen.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="p-4 bg-white border rounded-4 h-100 lift">
+          <div class="feature-icon"><i class="bi bi-list-check"></i></div>
+          <h3 class="h6">Klare Leistungen</h3>
+          <p class="text-muted small mb-0">Der vereinbarte Reinigungsumfang ist nachvollziehbar. Das reduziert Missverständnisse und erleichtert Qualitätskontrollen.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="p-4 bg-white border rounded-4 h-100 lift">
+          <div class="feature-icon"><i class="bi bi-building-check"></i></div>
+          <h3 class="h6">Für viele Objektarten</h3>
+          <p class="text-muted small mb-0">Wir reinigen Büros, Praxen, Treppenhäuser, Gewerbeflächen und Glasflächen in Mainz und Umgebung.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-9">
+        <div class="p-4 p-md-5 bg-light border rounded-4">
+          <h3 class="h4">Gebäudereinigung Mainz mit nachvollziehbarem Leistungsumfang</h3>
+          <p class="text-muted mb-3">Eine professionelle Gebäudereinigung ist dann besonders wirksam, wenn sie regelmäßig und passend zum Objekt durchgeführt wird. In einem Büro mit vielen Mitarbeitenden sind andere Schwerpunkte nötig als in einer kleinen Praxis oder einem Treppenhaus mit hoher Bewohnerfrequenz. Deshalb prüft MIA Reinigung bei jedem Auftrag, welche Bereiche besonders beansprucht werden und welche Reinigungsintervalle sinnvoll sind.</p>
+          <p class="text-muted mb-0">Typische Kriterien sind Quadratmeterzahl, Bodenbelag, Besucheraufkommen, Hygieneanforderungen, Öffnungszeiten, Zugangsmöglichkeiten und gewünschte Zusatzleistungen wie Fensterreinigung. Auf dieser Basis entsteht ein Reinigungsplan, der sowohl wirtschaftlich als auch praktisch ist. Für Kunden in Mainz schafft das Planungssicherheit und ein dauerhaft gepflegtes Erscheinungsbild.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-white">
   <div class="container">
     <div class="text-center mb-4">
       <div class="section-label mb-2">Kundenstimmen</div>
       <h2 class="section-title mb-2">Was unsere Kunden sagen</h2>
-      <p class="section-text">
-        Viele unserer Kunden vertrauen uns seit Jahren – ob Hausverwaltung, Unternehmen oder private Haushalte.
-      </p>
+      <p class="section-text">Kunden in Mainz und Umgebung vertrauen uns bei Büroreinigung, Treppenhausreinigung, Praxisreinigung, Fensterreinigung und regelmäßiger Unterhaltsreinigung.</p>
     </div>
-
     <div class="row g-4">
-      <div class="col-md-4">
-        <div class="testimonial lift">
-          <p class="mb-3">
-            „Unsere Büroräume werden seit Monaten von Reinigungsfirma MIA gereinigt – zuverlässig, gründlich und immer termingerecht. 
-            Die Zusammenarbeit ist unkompliziert.“
-          </p>
-          <div class="name">B. Schneider</div>
-          <div class="role">Büroleitung, kleines Unternehmen</div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="testimonial lift">
-          <p class="mb-3">
-            „Besonders die regelmäßige Treppenhausreinigung hat unser Objekt deutlich aufgewertet. 
-            Mieter und Besucher nehmen die Sauberkeit positiv wahr.“
-          </p>
-          <div class="name">Hausverwaltung M.</div>
-          <div class="role">Mehrfamilienhaus</div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="testimonial lift">
-          <p class="mb-3">
-            „Nach der Renovierung hat Reinigungsfirma MIA die Bauendreinigung übernommen – alles lief schnell, ordentlich und wie abgesprochen.“
-          </p>
-          <div class="name">Familie K.</div>
-          <div class="role">Privathaushalt</div>
-        </div>
-      </div>
+      <div class="col-md-4"><div class="testimonial lift"><p class="mb-3">„Unsere Büroräume in Mainz werden seit Monaten zuverlässig, gründlich und termingerecht gereinigt. Die Abstimmung ist unkompliziert.“</p><div class="name">B. Schneider</div><div class="role">Büroleitung, kleines Unternehmen</div></div></div>
+      <div class="col-md-4"><div class="testimonial lift"><p class="mb-3">„Die regelmäßige Treppenhausreinigung hat unser Objekt sichtbar aufgewertet. Mieter und Besucher merken den Unterschied.“</p><div class="name">Hausverwaltung M.</div><div class="role">Mehrfamilienhaus in Mainz</div></div></div>
+      <div class="col-md-4"><div class="testimonial lift"><p class="mb-3">„Nach der Renovierung lief die Reinigung schnell, ordentlich und wie abgesprochen. Besonders gut war die klare Kommunikation.“</p><div class="name">Familie K.</div><div class="role">Privathaushalt aus der Region</div></div></div>
     </div>
   </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="section bg-white">
+</section><section class="section">
   <div class="container">
     <div class="text-center mb-4">
       <div class="section-label mb-2">FAQ</div>
-      <h2 class="section-title mb-2">Häufige Fragen zur Gebäudereinigung</h2>
-      <p class="section-text">
-        Hier finden Sie Antworten auf häufig gestellte Fragen. Für alles Weitere stehen wir Ihnen persönlich zur Verfügung.
-      </p>
+      <h2 class="section-title mb-2">Häufige Fragen zur Gebäudereinigung Mainz</h2>
     </div>
-
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="accordion" id="faqAccordion">
           <div class="accordion-item">
-            <h2 class="accordion-header" id="q1">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
-                Reinigen Sie sowohl gewerbliche als auch private Objekte?
-              </button>
-            </h2>
-            <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Ja. Wir betreuen sowohl Büros und Gewerbeflächen als auch Treppenhäuser und private Wohnungen bzw. Häuser. 
-                Den Leistungsumfang passen wir immer individuell an.
-              </div>
-            </div>
+            <h3 class="accordion-header" id="q0"><button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#a0">Welche Leistungen umfasst die Gebäudereinigung Mainz?</button></h3>
+            <div id="a0" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Unsere Gebäudereinigung Mainz umfasst Büroreinigung, Unterhaltsreinigung, Treppenhausreinigung, Praxisreinigung und Fensterreinigung. Je nach Objekt reinigen wir Arbeitsplätze, Böden, Oberflächen, Sanitärbereiche, Küchen, Eingänge, Treppen, Geländer, Wartebereiche, Behandlungsräume, Glasflächen und Rahmen. Der konkrete Leistungsumfang wird vor Beginn individuell vereinbart.</div></div>
+          </div><div class="accordion-item">
+            <h3 class="accordion-header" id="q1"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1">Für welche Kunden in Mainz arbeitet MIA Reinigung?</button></h3>
+            <div id="a1" class="accordion-collapse collapse " data-bs-parent="#faqAccordion"><div class="accordion-body">Wir arbeiten für Unternehmen, Büros, Praxen, Hausverwaltungen, Eigentümergemeinschaften, Gewerbebetriebe und private Auftraggeber in Mainz. Besonders häufig werden regelmäßige Unterhaltsreinigung, Büroreinigung, Treppenhausreinigung und Fensterreinigung angefragt.</div></div>
+          </div><div class="accordion-item">
+            <h3 class="accordion-header" id="q2"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">Wie berechnet MIA Reinigung den Preis für Gebäudereinigung in Mainz?</button></h3>
+            <div id="a2" class="accordion-collapse collapse " data-bs-parent="#faqAccordion"><div class="accordion-body">Der Preis hängt von Objektgröße, Verschmutzungsgrad, Bodenbelägen, Reinigungsintervall, Hygieneanforderungen und gewünschten Zusatzleistungen ab. Nach einer Abstimmung oder Besichtigung erhalten Sie ein transparentes Angebot. So wissen Sie vor dem Start, welche Leistungen enthalten sind und welche Kosten entstehen.</div></div>
+          </div><div class="accordion-item">
+            <h3 class="accordion-header" id="q3"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">Sind Reinigungstermine außerhalb der Öffnungszeiten möglich?</button></h3>
+            <div id="a3" class="accordion-collapse collapse " data-bs-parent="#faqAccordion"><div class="accordion-body">Ja. Viele Reinigungen in Mainz erfolgen frühmorgens, abends oder zu festen Zeiten außerhalb des normalen Betriebs. Das ist besonders bei Büroreinigung, Praxisreinigung und Gewerbeflächen sinnvoll, damit Mitarbeitende, Patienten und Kunden nicht gestört werden.</div></div>
+          </div><div class="accordion-item">
+            <h3 class="accordion-header" id="q4"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4">Bringt MIA Reinigung Reinigungsmittel und Geräte mit?</button></h3>
+            <div id="a4" class="accordion-collapse collapse " data-bs-parent="#faqAccordion"><div class="accordion-body">In der Regel bringen wir die benötigten Reinigungsmittel und Geräte mit. Wenn in Ihrem Objekt bestimmte Produkte verwendet werden sollen, stimmen wir das vorab ab. Wichtig ist, dass Reinigungsmittel, Oberflächen und Hygieneanforderungen zusammenpassen.</div></div>
+          </div><div class="accordion-item">
+            <h3 class="accordion-header" id="q5"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5">Wie schnell kann ein Angebot erstellt werden?</button></h3>
+            <div id="a5" class="accordion-collapse collapse " data-bs-parent="#faqAccordion"><div class="accordion-body">Wenn alle Informationen vorliegen, können wir oft kurzfristig eine erste Einschätzung geben. Für ein genaues Angebot zur Gebäudereinigung Mainz sind Angaben zu Objektart, Größe, Adresse, gewünschter Leistung und Reinigungsintervall hilfreich. Bei größeren Objekten empfehlen wir eine Besichtigung.</div></div>
+          </div><div class="accordion-item">
+            <h3 class="accordion-header" id="q6"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a6">Kann ich einzelne Leistungen kombinieren?</button></h3>
+            <div id="a6" class="accordion-collapse collapse " data-bs-parent="#faqAccordion"><div class="accordion-body">Ja. Viele Kunden kombinieren zum Beispiel Unterhaltsreinigung mit Fensterreinigung oder Büroreinigung mit regelmäßiger Sanitärreinigung. Auch Treppenhausreinigung und Objektpflege lassen sich sinnvoll verbinden. MIA Reinigung stellt den Leistungsplan passend zu Ihrem Gebäude in Mainz zusammen.</div></div>
+          </div><div class="accordion-item">
+            <h3 class="accordion-header" id="q7"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a7">Bietet MIA Reinigung auch Gebäudereinigung in Wiesbaden an?</button></h3>
+            <div id="a7" class="accordion-collapse collapse " data-bs-parent="#faqAccordion"><div class="accordion-body">Ja. MIA Reinigung betreut Kunden in Mainz und Wiesbaden. Zum Einsatzgebiet gehören unter anderem Büros, Praxen, Treppenhäuser, Gewerbeflächen und Immobilien von Hausverwaltungen.</div></div>
           </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="q2">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
-                Bringen Sie Reinigungsmittel und Equipment mit?
-              </button>
-            </h2>
-            <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                In der Regel bringen wir alle benötigten Reinigungsmittel und Geräte mit. 
-                Wenn Sie spezielle Produkte wünschen, können wir diese in Abstimmung ebenfalls verwenden.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="q3">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">
-                Wie berechnen Sie den Preis für die Reinigung?
-              </button>
-            </h2>
-            <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Die Preise hängen von Objektgröße, Verschmutzungsgrad, Leistungsumfang und Intervall ab. 
-                Nach einer kurzen Besichtigung erhalten Sie ein transparentes Angebot zum Festpreis.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="q4">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4">
-                Können die Reinigungen außerhalb unserer Öffnungszeiten erfolgen?
-              </button>
-            </h2>
-            <div id="a4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Ja. Viele unserer Kunden lassen die Reinigung frühmorgens oder abends durchführen. 
-                Wir finden gemeinsam mit Ihnen passende Zeitfenster.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="q5">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5">
-                Wie schnell können Sie einen Termin anbieten?
-              </button>
-            </h2>
-            <div id="a5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                In vielen Fällen können wir kurzfristig Reinigungen übernehmen. 
-                Teilen Sie uns Ihre Wunschtermine mit – wir melden uns zügig mit einem Vorschlag zurück.
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
-
   </div>
-</section>
-
-<!-- KONTAKT -->
-<section id="kontakt" class="section">
+</section><section class="section bg-white">
+  <div class="container">
+    <div class="text-center mb-4">
+      <div class="section-label mb-2">Weitere Seiten</div>
+      <h2 class="section-title mb-2">Passende Informationen</h2>
+    </div>
+    <div class="row g-3 justify-content-center">
+      <div class="col-md-4"><a class="text-decoration-none text-reset" href="leistungen/bueroreinigung-mainz.html"><div class="p-4 bg-white border rounded-4 lift h-100"><h3 class="h6 mb-2">Büroreinigung Mainz</h3><p class="small text-muted mb-0">Büroreinigung Mainz: zuverlässige Reinigung von Büroräumen, Arbeitsplätzen, Sanitärbereichen und Teeküchen durch MIA Reinigung.</p></div></a></div><div class="col-md-4"><a class="text-decoration-none text-reset" href="leistungen/unterhaltsreinigung-mainz.html"><div class="p-4 bg-white border rounded-4 lift h-100"><h3 class="h6 mb-2">Unterhaltsreinigung Mainz</h3><p class="small text-muted mb-0">Unterhaltsreinigung Mainz für Büros, Praxen, Treppenhäuser und Gewerbeobjekte: regelmäßige Reinigung nach Plan.</p></div></a></div><div class="col-md-4"><a class="text-decoration-none text-reset" href="kontakt.html"><div class="p-4 bg-white border rounded-4 lift h-100"><h3 class="h6 mb-2">Kontakt</h3><p class="small text-muted mb-0">Kontakt zu MIA Reinigung: Angebot für Gebäudereinigung, Büroreinigung oder Treppenhausreinigung in Mainz und Wiesbaden anfragen.</p></div></a></div>
+    </div>
+  </div>
+</section><section class="section" id="kontakt">
   <div class="container">
     <div class="row g-5 align-items-start">
       <div class="col-lg-5">
         <div class="section-label mb-2">Kontakt</div>
         <h2 class="section-title mb-2">Jetzt unverbindliches Angebot anfragen</h2>
-        <p class="text-muted mb-3">
-          Beschreiben Sie kurz Ihr Objekt und den gewünschten Leistungsumfang.
-          Wir melden uns mit Rückfragen oder direkt mit einem Angebot – in Mainz, Wiesbaden und der umliegenden Region.
-        </p>
-
-        <div class="contact-meta mb-2 d-flex align-items-start gap-2">
-          <i class="bi bi-telephone"></i>
-          <div>
-            <div class="small text-muted">Telefon</div>
-            <a href="tel:+49 1521 2975639">+49 1521 2975639</a>
-          </div>
-        </div>
-
-        <div class="contact-meta mb-2 d-flex align-items-start gap-2">
-          <i class="bi bi-envelope"></i>
-          <div>
-            <div class="small text-muted">E-Mail</div>
-            <a href="mailto:miareinigung.info@gmail.com">miareinigung.info@gmail.com</a>
-          </div>
-        </div>
-
-        <!-- WhatsApp eingefügt -->
-        <div class="contact-meta mb-3 d-flex align-items-start gap-2">
-          <i class="bi bi-whatsapp"></i>
-          <div>
-            <div class="small text-muted">WhatsApp</div>
-<a href="https://wa.me/4915212975639"
-   target="_blank" class="btn btn-success mt-2">
-  <i class="bi bi-whatsapp me-2"></i> WhatsApp schreiben
-</a>
-          </div>
-        </div>
-        <div class="contact-meta mb-3 d-flex align-items-start gap-2">
-          <i class="bi bi-geo-alt"></i>
-          <div>
-            <div class="small text-muted">Adresse</div>
-            <span>Hochheimer Straße 72<br>55246 Mainz-Kostheim</span>
-          </div>
-        </div>
-
-        <div class="contact-meta mb-3 d-flex align-items-start gap-2">
-          <i class="bi bi-map"></i>
-          <div class="w-100">
-            <div class="small text-muted">Google Maps</div>
-            <iframe
-              title="Google Maps – Hochheimer Straße 72, 55246 Mainz-Kostheim"
-              width="100%"
-              height="220"
-              style="border:0; border-radius: 12px;"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Hochheimer%20Stra%C3%9Fe%2072%2C%2055246%20Mainz-Kostheim&output=embed"
-            ></iframe>
-          </div>
-        </div>
-
-        <div class="small text-muted">
-          Hinweis: Durch das Absenden Ihrer Anfrage erklären Sie sich damit einverstanden, 
-          dass wir Ihre Angaben zur Beantwortung speichern und verarbeiten.
-        </div>
+        <p class="text-muted mb-3">Beschreiben Sie kurz Ihr Objekt und den gewünschten Leistungsumfang. Wir melden uns mit Rückfragen oder direkt mit einem Angebot.</p>
+        <div class="contact-meta mb-2 d-flex align-items-start gap-2"><i class="bi bi-telephone"></i><div><div class="small text-muted">Telefon</div><a href="tel:+4915212975639">+49 1521 2975639</a></div></div>
+        <div class="contact-meta mb-2 d-flex align-items-start gap-2"><i class="bi bi-envelope"></i><div><div class="small text-muted">E-Mail</div><a href="mailto:miareinigung.info@gmail.com">miareinigung.info@gmail.com</a></div></div>
+        <div class="contact-meta mb-3 d-flex align-items-start gap-2"><i class="bi bi-whatsapp"></i><div><div class="small text-muted">WhatsApp</div><a href="https://wa.me/4915212975639" target="_blank" rel="noopener" class="btn btn-success mt-2"><i class="bi bi-whatsapp me-2"></i> WhatsApp schreiben</a></div></div>
+        <div class="contact-meta mb-3 d-flex align-items-start gap-2"><i class="bi bi-geo-alt"></i><div><div class="small text-muted">Adresse</div><span>Hochheimer Straße 72<br>55246 Mainz-Kostheim</span></div></div>
+        <div class="small text-muted">Einsatzgebiet: Mainz, Wiesbaden, Mainz-Kostheim und Umgebung.</div>
       </div>
-
       <div class="col-lg-7">
         <div class="contact-card lift">
-          <!-- Platzhalter-Formular (Action/Backend später ergänzen) -->
           <form>
             <div class="row g-3">
-              <div class="col-md-6">
-                <label class="form-label">Name*</label>
-                <input type="text" class="form-control" placeholder="Ihr Name" required>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">E-Mail*</label>
-                <input type="email" class="form-control" placeholder="Ihre E-Mail-Adresse" required>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Telefon</label>
-                <input type="tel" class="form-control" placeholder="Für Rückfragen (optional)">
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Objektart</label>
-                <select class="form-select">
-                  <option selected>Bitte auswählen</option>
-                  <option>Büro / Gewerbe</option>
-                  <option>Treppenhaus / Objektverwaltung</option>
-                  <option>Wohnung / Haus</option>
-                  <option>Sonstiges</option>
-                </select>
-              </div>
-              <div class="col-12">
-                <label class="form-label">Nachricht / Beschreibung*</label>
-                <textarea class="form-control" rows="4" placeholder="Kurzbeschreibung der Räumlichkeiten und gewünschten Leistung" required></textarea>
-              </div>
-              <div class="col-12">
-                <label class="form-label">Wunschtermine</label>
-                <input type="text" class="form-control" placeholder="z. B. ab nächstem Monat, einmal pro Woche">
-              </div>
-              <div class="col-12 d-flex align-items-center gap-2">
-                <input type="checkbox" class="form-check-input" id="datenschutz">
-                <label for="datenschutz" class="form-check-label small">
-                  Ich habe die <a href="#datenschutz">Datenschutzhinweise</a> gelesen und akzeptiere sie.*
-                </label>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="btn btn-accent w-100">
-                  <i class="bi bi-send me-2"></i> Anfrage absenden
-                </button>
-              </div>
+              <div class="col-md-6"><label class="form-label">Name*</label><input type="text" class="form-control" placeholder="Ihr Name" required></div>
+              <div class="col-md-6"><label class="form-label">E-Mail*</label><input type="email" class="form-control" placeholder="Ihre E-Mail-Adresse" required></div>
+              <div class="col-md-6"><label class="form-label">Telefon</label><input type="tel" class="form-control" placeholder="Für Rückfragen (optional)"></div>
+              <div class="col-md-6"><label class="form-label">Objektart</label><select class="form-select"><option selected>Bitte auswählen</option><option>Büro / Gewerbe</option><option>Treppenhaus / Objektverwaltung</option><option>Praxis</option><option>Wohnung / Haus</option><option>Sonstiges</option></select></div>
+              <div class="col-12"><label class="form-label">Nachricht / Beschreibung*</label><textarea class="form-control" rows="4" placeholder="Kurzbeschreibung der Räumlichkeiten und gewünschten Leistung" required></textarea></div>
+              <div class="col-12"><label class="form-label">Wunschtermine</label><input type="text" class="form-control" placeholder="z. B. ab nächstem Monat, einmal pro Woche"></div>
+              <div class="col-12 d-flex align-items-center gap-2"><input type="checkbox" class="form-check-input" id="datenschutz"><label for="datenschutz" class="form-check-label small">Ich habe die <a href="datenschutz.html">Datenschutzhinweise</a> gelesen und akzeptiere sie.*</label></div>
+              <div class="col-12"><button type="submit" class="btn btn-accent w-100"><i class="bi bi-send me-2"></i> Anfrage absenden</button></div>
             </div>
           </form>
         </div>
       </div>
-
     </div>
   </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
-    <div>
-      <span class="small">&copy; <span id="year"></span> Reinigungsfirma MIA – Gebäudereinigung. Alle Rechte vorbehalten.</span>
+</section><footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h2 class="h6 text-white">MIA Reinigung</h2>
+        <p class="mb-2">Gebäudereinigung Mainz, Wiesbaden und Umgebung.</p>
+        <p class="mb-0">Hochheimer Straße 72, 55246 Mainz-Kostheim<br><a href="tel:+4915212975639">+49 1521 2975639</a><br><a href="mailto:miareinigung.info@gmail.com">miareinigung.info@gmail.com</a></p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h2 class="h6 text-white">Mainz</h2>
+        <ul class="list-unstyled mb-0">
+          <li><a href="leistungen/bueroreinigung-mainz.html">Büroreinigung Mainz</a></li><li><a href="leistungen/unterhaltsreinigung-mainz.html">Unterhaltsreinigung Mainz</a></li><li><a href="leistungen/treppenhausreinigung-mainz.html">Treppenhausreinigung Mainz</a></li><li><a href="leistungen/praxisreinigung-mainz.html">Praxisreinigung Mainz</a></li><li><a href="leistungen/fensterreinigung-mainz.html">Fensterreinigung Mainz</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h2 class="h6 text-white">Wiesbaden</h2>
+        <ul class="list-unstyled mb-0">
+          <li><a href="wiesbaden/gebaeudereinigung-wiesbaden.html">Gebäudereinigung Wiesbaden</a></li><li><a href="wiesbaden/bueroreinigung-wiesbaden.html">Büroreinigung Wiesbaden</a></li><li><a href="wiesbaden/treppenhausreinigung-wiesbaden.html">Treppenhausreinigung Wiesbaden</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h2 class="h6 text-white">Unternehmen</h2>
+        <ul class="list-unstyled mb-0">
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="referenzen.html">Referenzen</a></li>
+          <li><a href="karriere.html">Karriere</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h2 class="h6 text-white">SEO</h2>
+        <ul class="list-unstyled mb-0">
+          <li><a href="ratgeber/">Ratgeber</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="d-flex gap-3">
-      <a href="impressum.html" class="small">Impressum</a>
-      <a href="datenschutz.html" class="small">Datenschutz</a>
-      <a href="#kontakt" class="small">Kontakt</a>
-    </div>
+    <hr class="border-secondary my-4">
+    <div class="small">&copy; <span id="year"></span> MIA Reinigung - Gebäudereinigung. Alle Rechte vorbehalten.</div>
   </div>
 </footer>
-
-<!-- Optional: Dummy-Anker für Impressum / Datenschutz, bis eigene Seiten existieren 
-<section id="impressum" class="section bg-white">
-  <div class="container">
-    <h3>Impressum</h3>
-    <p class="text-muted small">
-      Hier können Sie Ihr Impressum einfügen (Firmenname, Anschrift, Vertretungsberechtigte, Register, USt-ID etc.).
-    </p>
-  </div>
-</section>
-
-<section id="datenschutz" class="section">
-  <div class="container">
-    <h3>Datenschutz</h3>
-    <p class="text-muted small">
-      Hier können Sie Ihre Datenschutzerklärung einfügen oder auf eine separate Seite verlinken.
-    </p>
-  </div>
-</section>-->
-
-<!-- JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  // Jahr im Footer setzen
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
