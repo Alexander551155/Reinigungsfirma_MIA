@@ -398,7 +398,7 @@
     :root { --accent:#0f7bff; --accent-soft:rgba(15,123,255,.08); --dark:#111827; --muted:#6b7280; }
     * { scroll-behavior:smooth; }
     body { font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:#111827; background:#f9fafb; }
-    .navbar { padding-top:.75rem; padding-bottom:.75rem; background:rgba(255,255,255,.96)!important; backdrop-filter:blur(10px); }
+    .navbar { padding-top:.35rem; padding-bottom:.35rem; background:rgba(255,255,255,.96)!important; backdrop-filter:blur(10px); }
     .navbar-brand span { font-size:1.15rem; letter-spacing:.03em; }
     .nav-link { font-weight:500; color:#4b5563!important; }
     .nav-link:hover,.nav-link.active { color:var(--accent)!important; }
@@ -444,7 +444,7 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-      <img src="LOGO_ORIG_123.png" alt="MIA Reinigung Gebäudereinigung Mainz" width="70" height="70" decoding="async">
+      <img src="LOGO_ORIG_123.png" alt="MIA Reinigung Gebäudereinigung Mainz" width="54" height="54" decoding="async">
       <span class="fw-semibold">MIA Reinigung</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Navigation öffnen">
@@ -856,15 +856,15 @@
       </div>
       <div class="col-lg-7">
         <div class="contact-card lift">
-          <form>
+          <form class="quote-form">
             <div class="row g-3">
-              <div class="col-md-6"><label class="form-label">Name*</label><input type="text" class="form-control" placeholder="Ihr Name" required></div>
-              <div class="col-md-6"><label class="form-label">E-Mail*</label><input type="email" class="form-control" placeholder="Ihre E-Mail-Adresse" required></div>
-              <div class="col-md-6"><label class="form-label">Telefon</label><input type="tel" class="form-control" placeholder="Für Rückfragen (optional)"></div>
-              <div class="col-md-6"><label class="form-label">Objektart</label><select class="form-select"><option selected>Bitte auswählen</option><option>Büro / Gewerbe</option><option>Treppenhaus / Objektverwaltung</option><option>Praxis</option><option>Wohnung / Haus</option><option>Sonstiges</option></select></div>
-              <div class="col-12"><label class="form-label">Nachricht / Beschreibung*</label><textarea class="form-control" rows="4" placeholder="Kurzbeschreibung der Räumlichkeiten und gewünschten Leistung" required></textarea></div>
-              <div class="col-12"><label class="form-label">Wunschtermine</label><input type="text" class="form-control" placeholder="z. B. ab nächstem Monat, einmal pro Woche"></div>
-              <div class="col-12 d-flex align-items-center gap-2"><input type="checkbox" class="form-check-input" id="datenschutz"><label for="datenschutz" class="form-check-label small">Ich habe die <a href="datenschutz.html">Datenschutzhinweise</a> gelesen und akzeptiere sie.*</label></div>
+              <div class="col-md-6"><label class="form-label">Name*</label><input type="text" name="name" class="form-control" placeholder="Ihr Name" required></div>
+              <div class="col-md-6"><label class="form-label">E-Mail*</label><input type="email" name="email" class="form-control" placeholder="Ihre E-Mail-Adresse" required></div>
+              <div class="col-md-6"><label class="form-label">Telefon</label><input type="tel" name="phone" class="form-control" placeholder="Für Rückfragen (optional)"></div>
+              <div class="col-md-6"><label class="form-label">Objektart</label><select name="object_type" class="form-select"><option selected>Bitte auswählen</option><option>Büro / Gewerbe</option><option>Treppenhaus / Objektverwaltung</option><option>Praxis</option><option>Wohnung / Haus</option><option>Sonstiges</option></select></div>
+              <div class="col-12"><label class="form-label">Nachricht / Beschreibung*</label><textarea name="message" class="form-control" rows="4" placeholder="Kurzbeschreibung der Räumlichkeiten und gewünschten Leistung" required></textarea></div>
+              <div class="col-12"><label class="form-label">Wunschtermine</label><input type="text" name="dates" class="form-control" placeholder="z. B. ab nächstem Monat, einmal pro Woche"></div>
+              <div class="col-12 d-flex align-items-center gap-2"><input type="checkbox" class="form-check-input" id="datenschutz" required><label for="datenschutz" class="form-check-label small">Ich habe die <a href="datenschutz.html">Datenschutzhinweise</a> gelesen und akzeptiere sie.*</label></div>
               <div class="col-12"><button type="submit" class="btn btn-accent w-100"><i class="bi bi-send me-2"></i> Anfrage absenden</button></div>
             </div>
           </form>
@@ -916,6 +916,36 @@
   </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.querySelectorAll('.quote-form').forEach((form) => {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const data = new FormData(form);
+      const subject = 'Anfrage Gebäudereinigung Mainz';
+      const body = [
+        'Neue Anfrage über mia-reinigung.de',
+        '',
+        `Name: ${data.get('name') || ''}`,
+        `E-Mail: ${data.get('email') || ''}`,
+        `Telefon: ${data.get('phone') || ''}`,
+        `Objektart: ${data.get('object_type') || ''}`,
+        `Wunschtermine: ${data.get('dates') || ''}`,
+        '',
+        'Nachricht:',
+        data.get('message') || ''
+      ].join('\n');
+
+      window.location.href = `mailto:miareinigung.info@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  });
+</script>
 </body>
 </html>
