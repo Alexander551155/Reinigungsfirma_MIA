@@ -588,7 +588,7 @@ function contactSection() {
         <p class="text-muted mb-3">Beschreiben Sie kurz Ihr Objekt und den gewünschten Leistungsumfang. Wir melden uns mit Rückfragen oder direkt mit einem Angebot.</p>
         <div class="contact-meta mb-2 d-flex align-items-start gap-2"><i class="bi bi-telephone"></i><div><div class="small text-muted">Telefon</div><a href="${phoneHref}">${phone}</a></div></div>
         <div class="contact-meta mb-2 d-flex align-items-start gap-2"><i class="bi bi-envelope"></i><div><div class="small text-muted">E-Mail</div><a href="mailto:${email}">${email}</a></div></div>
-        <div class="contact-meta mb-3 d-flex align-items-start gap-2"><i class="bi bi-whatsapp"></i><div><div class="small text-muted">WhatsApp</div><a href="https://wa.me/4915212975639" target="_blank" rel="noopener" class="btn btn-success mt-2"><i class="bi bi-whatsapp me-2"></i> WhatsApp schreiben</a></div></div>
+        <div class="contact-meta mb-3 d-flex align-items-start gap-2"><i class="bi bi-whatsapp"></i><div><div class="small text-muted">WhatsApp</div><a href="https://wa.me/4915212975639" target="_blank" rel="noopener" class="btn btn-success mt-2" style="--bs-btn-bg:#25D366;--bs-btn-border-color:#25D366;--bs-btn-hover-bg:#1ebe5d;--bs-btn-hover-border-color:#1ebe5d;--bs-btn-active-bg:#1aad54;--bs-btn-active-border-color:#1aad54"><i class="bi bi-whatsapp me-2"></i> WhatsApp schreiben</a></div></div>
         <div class="contact-meta mb-3 d-flex align-items-start gap-2"><i class="bi bi-geo-alt"></i><div><div class="small text-muted">Adresse</div><span>Hochheimer Straße 72<br>55246 Mainz-Kostheim</span></div></div>
         <div class="small text-muted">Einsatzgebiet: Mainz, Wiesbaden, Mainz-Kostheim und Umgebung.</div>
       </div>
