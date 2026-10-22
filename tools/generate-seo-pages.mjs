@@ -218,7 +218,7 @@ const pages = [
         bullets: ["Geschultes Reinigungspersonal", "Moderne Reinigungsmittel und Geräte", "Dokumentierte Abläufe", "Flexible Einsätze außerhalb Ihrer Öffnungszeiten"],
       },
     ],
-    related: ["/referenzen.html", "/kontakt.html", "/karriere.html"],
+    related: ["/referenzen.html", "/kontakt.html"],
   },
   {
     path: "referenzen.html",
@@ -251,25 +251,6 @@ const pages = [
     contactOnly: true,
     sections: [],
     related: ["/leistungen/bueroreinigung-mainz.html", "/wiesbaden/gebaeudereinigung-wiesbaden.html", "/ueber-uns.html"],
-  },
-  {
-    path: "karriere.html",
-    title: "Karriere | Reinigungskraft Jobs Mainz & Wiesbaden",
-    description: "Karriere bei Reinigungsfirma MIA: Reinigungskraft Jobs in Mainz, Wiesbaden und Umgebung.",
-    h1: "Karriere",
-    eyebrow: "Jobs in der Reinigung",
-    lead: "Sie arbeiten sorgfältig, zuverlässig und gerne im Team? Reinigungsfirma MIA sucht Unterstützung für Reinigungsaufträge in Mainz, Wiesbaden und Umgebung.",
-    image: "carl-tronders-a4_Z0lMAO8Y-unsplash.jpg",
-    city: "Mainz",
-    sections: [
-      {
-        label: "Stellenprofil",
-        title: "Reinigungskraft für Mainz und Wiesbaden",
-        text: "Wir suchen zuverlässige Mitarbeitende für Büroreinigung, Treppenhausreinigung und Objektpflege. Erfahrung ist hilfreich, wichtiger sind Sorgfalt, Pünktlichkeit und Verantwortungsbewusstsein.",
-        bullets: ["Flexible Einsatzzeiten nach Absprache", "Einarbeitung in Objekt und Reinigungsplan", "Faire Kommunikation und klare Aufgaben", "Bewerbung direkt per Telefon, E-Mail oder WhatsApp"],
-      },
-    ],
-    related: ["/kontakt.html", "/ueber-uns.html", "/leistungen/unterhaltsreinigung-mainz.html"],
   },
   {
     path: "ratgeber/index.html",
@@ -655,7 +636,7 @@ function sitemapContent() {
     ["Home", [["Gebäudereinigung Mainz", "/"]]],
     ["Service Pages", navServices],
     ["City Pages", navCities],
-    ["Additional SEO Pages", [["Über uns", "/ueber-uns.html"], ["Referenzen", "/referenzen.html"], ["Kontakt", "/kontakt.html"], ["Karriere", "/karriere.html"]]],
+    ["Additional SEO Pages", [["Über uns", "/ueber-uns.html"], ["Referenzen", "/referenzen.html"], ["Kontakt", "/kontakt.html"]]],
     ["Blog Category", [["Ratgeber", "/ratgeber/"]]],
     ["Rechtliches", [["Impressum", "/impressum.html"], ["Datenschutz", "/datenschutz.html"]]],
   ];
@@ -701,7 +682,6 @@ function footer() {
         <ul class="list-unstyled mb-0">
           <li><a href="/ueber-uns.html">Über uns</a></li>
           <li><a href="/referenzen.html">Referenzen</a></li>
-          <li><a href="/karriere.html">Karriere</a></li>
           <li><a href="/kontakt.html">Kontakt</a></li>
         </ul>
       </div>
